@@ -104,7 +104,7 @@ export default function Home() {
       // Busca users role institution
       let { data: users, error: userError } = await supabase
         .from("users")
-        .select("id, name, location")
+        .select("id, name, location, whatsapp_number")
         .eq("role", "institution");
       if (userError) {
         setLoading(false);
@@ -142,7 +142,7 @@ export default function Home() {
       let { data: servicesData, error: servicesError } = await supabase
         .from("services")
         .select(
-          `*, service_translations(name, language_code), categories(id, category_translations(name, language_code)), user:users!inner(name)`
+          `*, service_translations(name, language_code), categories(id, category_translations(name, language_code)), user:users!inner(name, whatsapp_number)`
         )
         .in("user_id", institutionIds)
         .eq("service_translations.language_code", lang)
@@ -176,6 +176,7 @@ export default function Home() {
           createdAt: service.created_at,
           user_id: service.user_id,
           dist: inst ? inst.dist : 9999,
+          whatsapp_number: service.user?.whatsapp_number || "",
         };
       });
       // Filtro por categoria
@@ -198,6 +199,18 @@ export default function Home() {
     };
     if (userLocation) fetchNearbyServices();
   }, [userLocation, i18n.language, selectedCategory, searchTerm]);
+
+  function open_whatsapp(number, message = "") {
+    const clean_number = number.replace(/\D/g, "");
+    const url = `https://wa.me/${clean_number}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  }
+
+  const handle_whastapp = (whatsapp_number, name) => {
+    open_whatsapp(whatsapp_number, `Olá, tenho interesse no serviço: ${name}`);
+  };
 
   return (
     <div className="home-container">
@@ -264,7 +277,10 @@ export default function Home() {
           ) : (
             <div className="grid-services">
               {services.map((service) => (
-                <div
+                <button
+                  onClick={() =>
+                    handle_whastapp(service.whatsapp_number, service.name)
+                  }
                   key={service.id}
                   className="service-item d-flex column g-8px"
                 >
@@ -289,7 +305,7 @@ export default function Home() {
                       </span>
                     </div>
                   </div>
-                </div>
+                </button>
               ))}
             </div>
           )}

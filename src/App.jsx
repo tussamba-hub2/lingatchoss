@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Authentication from "./auth/Authentication";
 import Dashboard from "./panel/Dashboard";
@@ -9,15 +8,13 @@ import "./App.css";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/sign-in" element={<Authentication />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/details" element={<InstitutionDetails />} />
-        <Route path="/edit-service/:serviceId" element={<EditService />} />
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/sign-in" element={<Authentication />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/details" element={<InstitutionDetails />} />
+      <Route path="/edit-service/:serviceId" element={<EditService />} />
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 

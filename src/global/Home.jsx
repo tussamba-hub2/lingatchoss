@@ -209,7 +209,7 @@ export default function Home() {
   }
 
   const handle_whastapp = (whatsapp_number, name) => {
-    open_whatsapp(whatsapp_number, `Olá, tenho interesse no serviço: ${name}`);
+    open_whatsapp(709182228951613, `Olá, tenho interesse no serviço: ${name}`);
   };
 
   return (

@@ -617,7 +617,7 @@ i18n
           signin: "Connexion",
           // Home translations
           search_service: "Rechercher un service",
-          services_side: "Services près de chez vou",
+          services_side: "Services près de chez vous",
         },
       },
     },

@@ -279,7 +279,7 @@ export default function Home() {
               {services.map((service) => (
                 <button
                   onClick={() =>
-                    handle_whastapp(15551601497, service.name)
+                    handle_whastapp(service.whatsapp_number, service.name)
                   }
                   key={service.id}
                   className="service-item d-flex column g-8px"

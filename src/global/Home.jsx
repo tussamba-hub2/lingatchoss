@@ -209,7 +209,7 @@ export default function Home() {
   }
 
   const handle_whastapp = (whatsapp_number, name) => {
-    open_whatsapp(15551601497, `Olá, tenho interesse no serviço: ${name}`);
+    open_whatsapp(whatsapp_number, `Olá, tenho interesse no serviço: ${name}`);
   };
 
   return (
@@ -279,7 +279,7 @@ export default function Home() {
               {services.map((service) => (
                 <button
                   onClick={() =>
-                    handle_whastapp(service.whatsapp_number, service.name)
+                    handle_whastapp(15551601497, service.name)
                   }
                   key={service.id}
                   className="service-item d-flex column g-8px"

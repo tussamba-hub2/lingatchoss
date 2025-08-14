@@ -208,8 +208,10 @@ export default function Home() {
     window.open(url, "_blank");
   }
 
-  const handle_whastapp = (whatsapp_number, name) => {
-    open_whatsapp(whatsapp_number, `Olá, tenho interesse no serviço: ${name}`);
+  const handle_whastapp = (whatsapp_number, name, company_id) => {
+    // Prefixa o company_id antes da mensagem
+    const fullMessage = `${company_id} Olá, tenho interesse no serviço: ${name}`;
+    open_whatsapp(whatsapp_number, fullMessage);
   };
 
   return (
@@ -279,7 +281,8 @@ export default function Home() {
               {services.map((service) => (
                 <button
                   onClick={() =>
-                    handle_whastapp(service.whatsapp_number, service.name)
+                    handle_whastapp(service.whatsapp_number, service.name, 
+                      service.user_id)
                   }
                   key={service.id}
                   className="service-item d-flex column g-8px"

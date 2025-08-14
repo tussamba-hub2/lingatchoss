@@ -79,7 +79,7 @@ function Authentication() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${window.location.origin}/details`,
+          redirectTo: `https://tussamba-hub2.github.io/lingatchoss/details`,
         },
       });
 

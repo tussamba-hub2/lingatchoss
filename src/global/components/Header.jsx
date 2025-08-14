@@ -20,7 +20,7 @@ export default function Header() {
           alt="Linga Tchoss Logo"
           className="logo-img"
         />
-        <h1 className="rem-size">Linga Tchoss</h1>
+        <h1 className="rem-size hidden">Linga Tchoss</h1>
       </NavLink>
       <div className="d-flex items-center justify-end g-20px">
         <div className="user-comp relative">

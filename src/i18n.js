@@ -164,6 +164,62 @@ i18n
           //Home translations
           search_service: "Pesquisar serviço",
           services_side: "Serviços perto de si",
+
+          companies: "Empresas",
+          docs: "Docs",
+          blog: "Blog",
+          resources: "Recursos",
+          community: "Comunidade",
+
+          business_messaging: "Mensagens empresariais",
+          plans_available: "Planos disponíveis",
+          enterprise_registration: "Registro de empresa",
+
+          company_account: "Conta empresarial",
+          sign_up: "Criar conta",
+          sign_in: "Iniciar sessão",
+
+          ia_resources: "Recursos de IA",
+          ia_response: "Resposta de IA",
+          test_ia: "Testar IA",
+
+          app_resources: "Recursos da aplicação",
+          explore_app: "Explorar aplicação",
+          new_features: "Novas funcionalidades",
+
+          system_policies: "Políticas do sistema",
+          privacy_policies: "Políticas de privacidade",
+          terms_of_use: "Termos de uso",
+
+          enterprises: "Empresas",
+          people: "Pessoal",
+
+          account: "Conta",
+
+          main_text:
+            "Conectando você aos serviços que precisa, em qualquer lugar",
+          secondary_text:
+            "O Linga Tchoss é uma plataforma que reúne instituições e clientes em um só lugar. De farmácias a hospitais, de escolas a transportes, encontre e solicite serviços de forma rápida, prática e com entrega até sua porta",
+          explore_services: "Explorar Serviços",
+          whatsapp: "Whatsapp",
+          appointments: "Agendamentos",
+          on_your_door: "Na sua porta",
+          see_all: "Ver todos",
+          discover_service_categories: "Descubra categorias de serviços",
+          no_services_found_near_you:
+            "Nenhum serviço encontrado próximo de você.",
+
+          service_not_found: "O serviço que busca não foi encontrado",
+          go_back_home: "Voltar para a página inicial",
+          contact_support: "Contactar o suporte",
+          instituitions_near_you: "Instituições perto de você",
+          footer_p:
+            "Encontre e solicite serviços de forma rápida, prática e com entrega até sua porta",
+          quick_links: "Lins rápidos",
+          about_us: "Sobre nós",
+          institutions: "Instituições",
+          all_rights_reserved: "Todos os direitos reservados",
+          contacts: "Contactos",
         },
       },
       en: {
@@ -311,6 +367,61 @@ i18n
           //Home translations
           search_service: "Search service",
           services_side: "Services near you",
+
+          companies: "Companies",
+          docs: "Docs",
+          blog: "Blog",
+          resources: "Resources",
+          community: "Community",
+
+          business_messaging: "Business messaging",
+          plans_available: "Plans available",
+          enterprise_registration: "Company registration",
+
+          company_account: "Company account",
+          sign_up: "Sign up",
+          sign_in: "Sign in",
+
+          ia_resources: "AI Resources",
+          ia_response: "AI Responses",
+          test_ia: "Test AI",
+
+          app_resources: "App resources",
+          explore_app: "Explore app",
+          new_features: "New features",
+
+          system_policies: "System policies",
+          privacy_policies: "Privacy policies",
+          terms_of_use: "Terms of use",
+
+          enterprises: "Companies",
+          people: "People",
+
+          account: "Account",
+
+          main_text: "Connecting you to the services you need, anywhere",
+
+          secondary_text:
+            "Linga Tchoss is a platform that brings together institutions and clients in one place. From pharmacies to hospitals, from schools to transport services — find and request services quickly, easily, and with delivery right to your door.",
+          explore_services: "Explore Services",
+
+          whatsapp: "Whatsapp",
+          appointments: "Appointments",
+          on_your_door: "On your door",
+          see_all: "See all",
+          discover_service_categories: "Discover service categories",
+          no_services_found_near_you: "No services found near you.",
+          service_not_found: "The service you are looking for was not found",
+          go_back_home: "Go back home",
+          contact_support: "Contact support",
+          instituitions_near_you: "Institutions near you",
+          footer_p:
+            "Find and request services quickly, easily, and with delivery right to your door",
+          quick_links: "Quick Links",
+          about_us: "About us",
+          institutions: "Institutions",
+          all_rights_reserved: "All rights reserved",
+          contacts: "Contacts",
         },
       },
       umb: {
@@ -464,6 +575,62 @@ i18n
           // Home translations
           search_service: "Twala ovisanju",
           services_side: "Ovisanju vyavali k'oku",
+
+          companies: "Vi-ñganda",
+          docs: "Vi-livulu vya ndunge",
+          blog: "Ohandi y'okutunga",
+          resources: "Ovikoko",
+          community: "Onjo y’omunu",
+
+          business_messaging: "Ohandi dovi-ñganda",
+          plans_available: "Ovipango vilipavailable",
+          enterprise_registration: "Okusajila kwa vi-ñganda",
+
+          company_account: "Ekonto lyovi-ñganda",
+          sign_up: "Okutunga ekonto",
+          sign_in: "Okwingila mukonto",
+
+          ia_resources: "Ovikoko vya AI",
+          ia_response: "Ohandi yavi AI",
+          test_ia: "Kukwate AI",
+
+          app_resources: "Ovikoko vya aplikasyoni",
+          explore_app: "Okutandulula aplikasyoni",
+          new_features: "Ovinji vyovakulu",
+
+          system_policies: "Ombwa yomalume",
+          privacy_policies: "Ombwa yokutalika okuhandi",
+          terms_of_use: "Ovihendo vokukwata",
+
+          enterprises: "Vi-ñganda",
+          people: "Onjo y'omunu",
+
+          account: "Ekonto",
+
+          main_text:
+            "Okuyokiya kwenda kuvisanje vyowi ulomboloka, koko kuli osi",
+
+          secondary_text:
+            "Linga Tchoss olombolwilo yokulitegua eyi okutwala ovilonga kwenda avalipwa pamoko. Tula ovifarmacya kwenda ovilonga vy’ohopitalu, ovikola kwenda ovitranporti – fena ovilonga kwenda okuvilomboloka kwenjele, kavava, kwenda vyaletiwa kuli wowo.",
+          explore_services: "Tandulula Ovisanju",
+
+          whatsapp: "Whatsapp",
+          appointments: "okulilo",
+          on_your_door: "Kuli wowo",
+          see_all: "Twala osi",
+          discover_service_categories: "Tandulula ocipande vy 'ovisanju",
+          no_services_found_near_you: "Ka ovisanju vyatwathiwe k'oku.",
+          service_not_found: "Ovisanju ovi olomboloka kaviwathiwe",
+          go_back_home: "Komboka kuli koma",
+          contact_support: "Kontakto ovipange vya ndunge",
+          instituitions_near_you: "Viomboloxelo vyavali k'oku",
+          footer_p:
+            "Twala ovilonga kwenda kuvisanje vyowi ulomboloka, koko kuli osi",
+          quick_links: "Ovilapo vyalekele",
+          about_us: "Okusumba kwetu",
+          institutions: "Omanu asokiyo",
+          all_rights_reserved: "Oluvile lwosi lwalipandike",
+          contacts: "Ovakwetu",
         },
       },
       fr: {
@@ -618,6 +785,56 @@ i18n
           // Home translations
           search_service: "Rechercher un service",
           services_side: "Services près de chez vous",
+
+          companies: "Entreprises",
+          docs: "Documents",
+          blog: "Blog",
+          resources: "Ressources",
+          community: "Communauté",
+
+          business_messaging: "Messagerie d'entreprise",
+          plans_available: "Plans disponibles",
+          enterprise_registration: "Inscription entreprise",
+
+          company_account: "Compte entreprise",
+          sign_up: "Créer un compte",
+          sign_in: "Se connecter",
+
+          ia_resources: "Ressources IA",
+          ia_response: "Réponses IA",
+          test_ia: "Tester l'IA",
+
+          app_resources: "Ressources de l'application",
+          explore_app: "Explorer l'application",
+          new_features: "Nouvelles fonctionnalités",
+
+          system_policies: "Politiques du système",
+          privacy_policies: "Politiques de confidentialité",
+          terms_of_use: "Conditions d'utilisation",
+
+          enterprises: "Entreprises",
+          people: "Personnes",
+
+          account: "Compte",
+          main_text:
+            "Vous connecter aux services dont vous avez besoin, partout",
+          secondary_text:
+            "Linga Tchoss est une plateforme qui regroupe institutions et clients en un seul endroit. Des pharmacies aux hôpitaux, des écoles aux transports, trouvez et demandez des services rapidement, facilement et avec livraison à votre porte.",
+          explore_services: "Explorer les Services",
+          see_all: "Voir tout",
+          discover_service_categories: "Découvrir les catégories de services",
+          no_services_found_near_you: "Aucun service trouvé près de chez vous.",
+          service_not_found: "Le service que vous recherchez est introuvable",
+          go_back_home: "Retour à l'accueil",
+          contact_support: "Contacter le support",
+          instituitions_near_you: "Institutions près de chez vous",
+          footer_p:
+            "Trouvez et demandez des services rapidement, facilement et avec livraison à votre porte",
+          quick_links: "Liens rapides",
+          about_us: "À propos de nous",
+          institutions: "Institutions",
+          all_rights_reserved: "Tous droits réservés",
+          contacts: "Contacts",
         },
       },
     },

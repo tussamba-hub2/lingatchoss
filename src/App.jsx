@@ -4,6 +4,7 @@ import Dashboard from "./panel/Dashboard";
 import InstitutionDetails from "./details/InstitutionDetails";
 import EditService from "./components/edit/Service.jsx";
 import Home from "./global/Home.jsx";
+import Service from "./global/components/details/Service";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/details" element={<InstitutionDetails />} />
       <Route path="/edit-service/:serviceId" element={<EditService />} />
+      <Route path="/service/:serviceId" element={<Service />} />
       <Route path="/" element={<Home />} />
     </Routes>
   );

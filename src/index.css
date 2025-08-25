@@ -1245,6 +1245,9 @@ i {
   .grid-login {
     grid-template-columns: auto;
   }
+  .rs-p-16 {
+    padding: 16px !important;
+  }
   .grid-login-right {
     padding: 0 16px;
     position: absolute;

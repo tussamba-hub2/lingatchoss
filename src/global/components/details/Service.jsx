@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { supabase } from "../../../../supabaseClient";
 import { useTranslation } from "react-i18next";
+import Header from "../Header";
 
 export default function Service() {
   const { t } = useTranslation();
@@ -17,7 +18,17 @@ export default function Service() {
       const { data, error } = await supabase
         .from("services")
         .select(
-          `*, service_translations(name, description, language_code), user:users(name, whatsapp_number), categories(id, category_translations(name, language_code))`
+          `*, 
+           service_translations(name, description, language_code), 
+           user:users(
+             name, 
+             whatsapp_number, 
+             sector:sectors(
+               id, 
+               sector_translations(name, language_code)
+             )
+           ), 
+           categories(id, category_translations(name, language_code))`
         )
         .eq("id", serviceId)
         .eq("service_translations.language_code", lang) // Filtra pelo idioma
@@ -62,6 +73,20 @@ export default function Service() {
     );
   }
 
+  function open_whatsapp(number, message = "") {
+    const clean_number = number.replace(/\D/g, "");
+    const url = `https://wa.me/${clean_number}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  }
+
+  const handle_whastapp = (whatsapp_number, name, company_id) => {
+    // Prefixa o company_id antes da mensagem
+    const fullMessage = `${company_id} ${t("greetings_service")} ${name}`;
+    open_whatsapp(whatsapp_number, fullMessage);
+  };
+
   if (!service) {
     return (
       <div className="all-center">
@@ -90,13 +115,58 @@ export default function Service() {
   }
 
   return (
-    <div>
-      <h1>{service.name}</h1>
-      <p>{service.description}</p>
-      <p>Price: {service.price} KZ</p>
-      <p>Category: {service.categories?.name || "N/A"}</p>
-      <p>Institution: {service.user?.name || "N/A"}</p>
-      <p>WhatsApp: {service.user?.whatsapp_number || "N/A"}</p>
+    <div className="padding-inside mt-100 d-flex items-center justify-center">
+      <div className="service-details">
+        <div className="img-svc-dtls relative">
+          <img
+            src={service.image_url || "../assets/images/app-logo.svg"}
+            alt={service.name}
+          />
+          <span className="abs-inst-name">{service.price} kz</span>
+        </div>
+        <div className="d-flex column g-32px">
+          <div className="d-flex column g-8px">
+            <h2 className="size-24 extra-bold">{service.name}</h2>
+            <p className="size-16">{service.description}</p>
+          </div>
+          <div className="d-flex column g-12px">
+            <p className="size-16">
+              <strong>{t("service")} </strong>{" "}
+              {service.categories?.category_translations?.find(
+                (tr) => tr.language_code === i18n.language
+              )?.name || "N/A"}
+            </p>
+            <NavLink className="d-flex items-center g-12px">
+              <img
+                src={service.user?.logo_url || "../assets/images/app-logo.svg"}
+                alt={service.user?.name || "N/A"}
+                className="default-user"
+              />
+              <div className="d-flex column">
+                <span>{service.user?.name || "N/A"}</span>
+                <span className="size-12 color-opac">
+                  {service.user?.sector?.sector_translations?.find(
+                    (tr) => tr.language_code === i18n.language
+                  )?.name || "N/A"}
+                </span>
+              </div>
+            </NavLink>
+          </div>
+          <button
+            onClick={() =>
+              handle_whastapp(
+                service.whatsapp_number,
+                service.name,
+                service.user_id
+              )
+            }
+            className="huge-btn huge-green d-flex items-center justify-center g-12px"
+          >
+            <i className="fi fi-brands-whatsapp"></i>
+            <span>{t("request_on_whastapp")}</span>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

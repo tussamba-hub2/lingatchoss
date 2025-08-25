@@ -15,6 +15,9 @@ i18n
     resources: {
       pt: {
         translation: {
+          greetings_service: "Olá, tenho interesse no serviço: ",
+          service: "Serviço",
+          request_on_whastapp: "Solicitar no whatsapp",
           welcome: "Bem-vindo",
           login: "Iniciar sessão no Linga Tchoss",
           forInstitutions: "para Instituições",
@@ -225,6 +228,9 @@ i18n
       },
       en: {
         translation: {
+          greetings_service: "Hello, I am interested in the service: ",
+          service: "Service",
+          request_on_whastapp: "Request on whatsapp",
           welcome: "Welcome",
           login: "Login to Linga Tchoss for Institutions",
           forInstitutions: "for Institutions",
@@ -428,6 +434,9 @@ i18n
       },
       umb: {
         translation: {
+          greetings_service: "Weyi, ndina okulinga kusanja: ",
+          service: "Ondaka",
+          request_on_whastapp: "Twala k'okuti WhatsApp",
           welcome: "Ukomwua",
           login: "Ulinga Linga Tchoss kwa Viomboloxelo",
           forInstitutions: "kwa Viomboloxelo",
@@ -638,6 +647,9 @@ i18n
       },
       fr: {
         translation: {
+          greetings_service: "Bonjour, je suis intéressé par le service: ",
+          service: "Service",
+          request_on_whastapp: "Demander sur WhatsApp",
           welcome: "Bienvenue",
           login: "Connexion à Linga Tchoss pour les institutions",
           forInstitutions: "pour les institutions",

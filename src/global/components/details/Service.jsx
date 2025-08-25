@@ -168,7 +168,7 @@ export default function Service() {
           >
             <i className="fi fi-brands-whatsapp"></i>
             <span>{t("request_on_whastapp")}</span>
-            <span>{service.price} kz</span>
+            <span className="appear">{service.price} kz</span>
           </button>
         </div>
       </div>

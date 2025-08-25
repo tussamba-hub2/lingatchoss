@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="d-flex column g-32px">
           <div className="d-flex items-center g-4px">
             <img
-              src="./assets/images/app-logo.svg"
+              src="./assets/images/app-logo2.svg"
               alt="App Logo"
               className="logo-img"
             />

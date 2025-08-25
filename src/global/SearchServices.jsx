@@ -7,11 +7,11 @@ export default function SearchServices() {
   const { t } = useTranslation();
 
   return (
-    <div className="home-container hover-contenting">
+    <div className="home-container hover-contenting pb-200-rs">
         <Header />
-        <div className="mt-100">
+        <main className="mt-100">
             <Services />
-        </div>
+        </main>
     </div>
   );
 }

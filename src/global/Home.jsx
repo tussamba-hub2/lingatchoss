@@ -29,7 +29,7 @@ export default function Home() {
       {showLangSelection && <LangSelection onLangSelect={handleLangSelect} />}
       <Header />
 
-      <main className="">
+      <main>
         <CoverArea />
         <HomeServices />
         <Institutions />

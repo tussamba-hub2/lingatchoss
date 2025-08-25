@@ -5,6 +5,7 @@ import InstitutionDetails from "./details/InstitutionDetails";
 import EditService from "./components/edit/Service.jsx";
 import Home from "./global/Home.jsx";
 import Service from "./global/components/details/Service";
+import SearchServices from "./global/SearchServices.jsx";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/edit-service/:serviceId" element={<EditService />} />
       <Route path="/service/:serviceId" element={<Service />} />
       <Route path="/" element={<Home />} />
+      <Route path="/search" element={<SearchServices />} />
     </Routes>
   );
 }

@@ -37,7 +37,7 @@ export default function Header() {
             isMenuActive ? "active" : ""
           }`}
         >
-          <NavLink className="d-flex items-center g-8px">
+          <NavLink to="/sign-in" className="d-flex items-center g-8px">
             <i className="fi fi-rr-chart-pie-alt appear"></i>
             <span>{t("companies")}</span>
             <i className="fi fi-rr-angle-small-down hidden"></i>
@@ -153,7 +153,7 @@ export default function Header() {
         </ul>
       </div>
       <div className="d-flex items-center justify-end g-20px">
-        <NavLink>
+        <NavLink to="/search">
           <i className="fi fi-rr-search"></i>
         </NavLink>
         <button onClick={handleLangButtonClick}>

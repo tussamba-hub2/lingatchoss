@@ -18,11 +18,11 @@ export default function CoverArea() {
                 </p>
               </div>
               <div className="d-flex items-center g-36px">
-                <NavLink className="huge-btn">
+                <NavLink to="/search" className="huge-btn">
                   <i className="fi fi-rr-search"></i>
                   <span className="nowrap">{t("explore_services")}</span>
                 </NavLink>
-                <NavLink className="huge-btn huge-br">
+                <NavLink to="/sign-in" className="huge-btn huge-br">
                   <span className="nowrap">{t("company_account")}</span>
                 </NavLink>
               </div>

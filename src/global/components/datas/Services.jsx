@@ -2,9 +2,11 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect } from "react";
 import { supabase } from "../../../../supabaseClient.js";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Services() {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const [userLocation, setUserLocation] = useState(null);
   const [services, setServices] = useState([]);
@@ -217,16 +219,14 @@ export default function Services() {
     <main className="home-content">
       <div className="d-flex search-home column g-20px">
         <div className="inside-u-knw d-flex column g-20px">
-          <div className="search-area-home-inside">
+          <div className="search-area-home-inside d-flex items-center g-12px">
+            <i className="fi fi-rr-search size-16"></i>
             <input
               type="text"
               placeholder={t("search_service")}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <button onClick={() => setSearchTerm("")} title={t("close")}>
-              <i className="fi fi-rr-search size-16"></i>
-            </button>
           </div>
           <div className="d-flex items-center wrap g-20px categories-classes">
             <button
@@ -247,72 +247,75 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className="container-products-list d-flex column g-32px">
-        <h4 className="size-18 medium">{t("services_side")}</h4>
-        {loading ? (
-          <div
-            className="d-flex items-center justify-center"
-            style={{ minHeight: "200px" }}
-          >
-            <span className="size-14 text-secondary">
-              {t("loadingServices") || "A carregar serviços..."}
-            </span>
-          </div>
-        ) : services.length === 0 ? (
-          <div
-            className="d-flex items-center justify-center"
-            style={{ minHeight: "200px" }}
-          >
-            <div className="d-flex column items-center g-16px">
-              <i className="fi fi-sr-box size-48 text-secondary"></i>
-              <span className="size-14 text-secondary text-center">
-                {t(
-                  "noNearbyServices",
-                  "Nenhum serviço encontrado próximo de você."
-                )}
-              </span>
-            </div>
-          </div>
-        ) : (
-          <div className="grid-services">
-            {services.map((service) => (
-              <button
-                onClick={() =>
-                  handle_whastapp(
-                    service.whatsapp_number,
-                    service.name,
-                    service.user_id
-                  )
-                }
-                key={service.id}
-                className="service-item d-flex column g-8px"
+      <section className="show-products-home mt-0">
+        <div className="d-flex column g-32px w-full">
+          <div className="d-flex w-full">
+            {loading ? (
+              <div
+                className="d-flex items-center justify-center w-full"
+                style={{ minHeight: "200px" }}
               >
-                {service.imageUrl ? (
-                  <div className="product-image">
-                    <img src={service.imageUrl} alt={service.name} />
-                  </div>
-                ) : (
-                  <div className="product-avatar">
-                    <i className="fi fi-sr-box"></i>
-                  </div>
-                )}
-                <div className="d-flex items-center justify-between p-s-8">
-                  <div className="d-flex column g-4px">
-                    <b className="medium size-14">
-                      {service.name.length > 16
-                        ? service.name.substring(0, 16) + "..."
-                        : service.name}
-                    </b>
-                    <span className="size-12 text-secondary">
-                      {service.institutionName}
-                    </span>
-                  </div>
+                <span className="loadering"></span>
+              </div>
+            ) : services.length === 0 ? (
+              <div className="d-flex items-center justify-center w-full">
+                <div className="d-flex column items-center g-16px">
+                  <i className="fi fi-sr-box size-48 text-secondary"></i>
+                  <span className="size-14 text-secondary text-center">
+                    {t(
+                      "no_services_found_near_you",
+                      "Nenhum serviço encontrado próximo de você."
+                    )}
+                  </span>
                 </div>
-              </button>
-            ))}
+              </div>
+            ) : (
+              <div className="services-gridden w-full">
+                {services.map((service) => (
+                  <button
+                    onClick={
+                      () => navigate(`/service/${service.id}`) // Passa o ID do serviço para a rota
+                    }
+                    key={service.id}
+                    className="service-item d-flex column g-8px relative"
+                  >
+                    {service.imageUrl ? (
+                      <div className="product-image">
+                        <img src={service.imageUrl} alt={service.name} />
+                      </div>
+                    ) : (
+                      <div className="product-avatar">
+                        <i className="fi fi-sr-box"></i>
+                      </div>
+                    )}
+                    <div className="d-flex items-center justify-between p-s-8">
+                      <div className="d-flex column g-4px">
+                        <b className="medium size-16">
+                          {service.name.length > 16
+                            ? service.name.substring(0, 16) + "..."
+                            : service.name}
+                        </b>
+                        <span className="color-opac size-12 d-flex items-center g-4px">
+                          <i className="fi fi-rr-marker color-opac"></i>
+                          <span className="color-opac size-12">
+                            {service.institutionName}
+                          </span>
+                          {service.plan_id && (
+                            <span className="pro-inst">PRO</span>
+                          )}
+                        </span>
+                        <span className="abs-inst-name">
+                          {service.price} kz
+                        </span>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
-        )}
-      </div>
+        </div>
+      </section>
     </main>
   );
 }

@@ -616,7 +616,7 @@ i {
 }
 .search-home .search-area-home-inside {
   background: var(--hover-border);
-  height: 60px;
+  height: 50px;
   border-radius: 30px;
   border: 1px solid var(--border-color);
   display: flex;
@@ -927,6 +927,9 @@ i {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.192);
   backdrop-filter: blur(5.5px);
   -webkit-backdrop-filter: blur(5.5px);
+}
+.mt-0 {
+    margin-top: 0 !important;
 }
 
 /*CARROUSELL STYLES*/
@@ -1252,6 +1255,12 @@ i {
 }
 
 @media screen and (max-width: 440px) {
+    .inside-u-knw {
+        padding: 16px;
+    }
+    .search-home .search-area-home-inside {
+        max-width: 100%;
+    }
     .abs-return {
         top: 16px;
         left: 16px;

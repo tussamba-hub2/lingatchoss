@@ -1239,6 +1239,14 @@ i {
 }
 
 @media screen and (max-width: 440px) {
+    .huge-btn.huge-green {
+        position: fixed;
+        bottom: -4px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        border-radius: 0;
+    }
   .padding-inside {
     padding: 0 16px;
   }

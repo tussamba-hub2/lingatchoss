@@ -115,7 +115,7 @@ export default function Service() {
   }
 
   return (
-    <div className="padding-inside mt-100 d-flex items-center justify-center">
+    <div className="padding-inside mt-100 d-flex items-center justify-center rs-mt-0">
       <div className="service-details">
         <div className="img-svc-dtls relative">
           <img

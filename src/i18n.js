@@ -830,6 +830,10 @@ i18n
           enterprises: "Entreprises",
           people: "Personnes",
 
+          whatsapp: "Whatsapp",
+          appointments: "Rendez-vous",
+          on_your_door: "À votre porte",
+
           account: "Compte",
           main_text:
             "Vous connecter aux services dont vous avez besoin, partout",

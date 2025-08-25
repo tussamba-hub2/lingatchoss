@@ -120,7 +120,7 @@ body {
 .logo-area h4 {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--text-primary);
 }
 .grid-login-right {
   display: flex;
@@ -1278,7 +1278,7 @@ i {
   .grid-login-right {
     padding: 0 16px;
     position: absolute;
-    background: var(--back-opac);
+    background: var(--background-color);
     top: 0;
     bottom: 0;
     left: 0;
@@ -1286,6 +1286,18 @@ i {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.192);
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
+    width: 100%;
+    padding: 16px;
+  }
+  .fully {
+    width: 100%;
+  }
+  .grid-login-right a.btn {
+    display: none;
+  }
+  .grid-login-right .btn {
+    width: 100%;
+    padding: 16px 20px;
   }
   .grid-login h1.rem-size {
     font-size: 1.1rem;

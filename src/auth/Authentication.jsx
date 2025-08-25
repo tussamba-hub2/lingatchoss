@@ -135,8 +135,8 @@ function Authentication() {
         </video>
       </div>
       <div className="grid-login-right">
-        <div className="d-flex items-center justify-center">
-          <div className="d-flex column g-32px">
+        <div className="d-flex items-center justify-center fully">
+          <div className="d-flex column g-32px fully">
             <div className="d-flex column g-20px">
               <h1 className="rem-size text-center">
                 {t("login")}{" "}

@@ -1246,6 +1246,7 @@ i {
         right: 0;
         width: 100%;
         border-radius: 0;
+        height: 70px;
     }
   .padding-inside {
     padding: 0 16px;

@@ -124,7 +124,7 @@ export default function Service() {
           />
           <span className="abs-inst-name">{service.price} kz</span>
         </div>
-        <div className="d-flex column g-32px">
+        <div className="d-flex column g-32px p-16">
           <div className="d-flex column g-8px">
             <h2 className="size-24 extra-bold">{service.name}</h2>
             <p className="size-16">{service.description}</p>

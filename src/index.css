@@ -915,6 +915,19 @@ i {
   background: var(--hover-border);
   border: 1px solid var(--border-color);
 }
+.abs-return {
+  position: absolute;
+  top: -70px;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  background: var(--hover-border-opac);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.192);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+}
 
 /*CARROUSELL STYLES*/
 
@@ -1239,15 +1252,20 @@ i {
 }
 
 @media screen and (max-width: 440px) {
-    .huge-btn.huge-green {
-        position: fixed;
-        bottom: -4px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        border-radius: 0;
-        height: 70px;
+    .abs-return {
+        top: 16px;
+        left: 16px;
+        border: none;
     }
+  .huge-btn.huge-green {
+    position: fixed;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+    height: 70px;
+  }
   .padding-inside {
     padding: 0 16px;
   }

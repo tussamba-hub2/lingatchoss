@@ -116,14 +116,18 @@ export default function Service() {
 
   return (
     <div className="padding-inside mt-100 d-flex items-center justify-center rs-mt-0">
-      <div className="service-details">
+      <div className="service-details relative">
         <div className="img-svc-dtls relative">
           <img
             src={service.image_url || "../assets/images/app-logo.svg"}
             alt={service.name}
           />
-          <span className="abs-inst-name">{service.price} kz</span>
+          <span className="abs-inst-name hidden">{service.price} kz</span>
         </div>
+
+        <button className="abs-return" onClick={() => window.history.back()}>
+          <i className="fi fi-rr-angle-small-left"></i>
+        </button>
         <div className="d-flex column g-32px p-16">
           <div className="d-flex column g-8px">
             <h2 className="size-24 extra-bold">{service.name}</h2>
@@ -164,6 +168,7 @@ export default function Service() {
           >
             <i className="fi fi-brands-whatsapp"></i>
             <span>{t("request_on_whastapp")}</span>
+            <span>{service.price} kz</span>
           </button>
         </div>
       </div>

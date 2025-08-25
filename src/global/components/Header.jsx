@@ -38,9 +38,10 @@ export default function Header() {
           }`}
         >
           <NavLink className="d-flex items-center g-8px">
+            <i className="fi fi-rr-chart-pie-alt appear"></i>
             <span>{t("companies")}</span>
-            <i className="fi fi-rr-angle-small-down"></i>
-            <div className="abs-inside-navigating">
+            <i className="fi fi-rr-angle-small-down hidden"></i>
+            <div className="abs-inside-navigating hidden">
               <div className="d-flex g-36px">
                 <div className="d-flex column g-8px">
                   <h4 className="light size-16 color-opac medium">
@@ -72,15 +73,18 @@ export default function Header() {
             </div>
           </NavLink>
           <NavLink className="d-flex items-center g-8px">
+            <i className="fi fi-rr-book-alt appear"></i>
             <span>{t("docs")}</span>
           </NavLink>
           <NavLink className="d-flex items-center g-8px">
+            <i className="fi fi-rr-blog-text appear"></i>
             <span>{t("blog")}</span>
           </NavLink>
           <NavLink className="d-flex items-center g-8px">
+            <i className="fi fi-rr-resources appear"></i>
             <span>{t("resources")}</span>
-            <i className="fi fi-rr-angle-small-down"></i>
-            <div className="abs-inside-navigating">
+            <i className="fi fi-rr-angle-small-down hidden"></i>
+            <div className="abs-inside-navigating hidden">
               <div className="d-flex g-36px">
                 <div className="d-flex column g-8px">
                   <h4 className="light size-16 color-opac medium">
@@ -125,10 +129,10 @@ export default function Header() {
             </div>
           </NavLink>
           <NavLink className="d-flex items-center g-8px">
+            <i className="fi fi-rr-population-globe appear"></i>
             <span>{t("community")}</span>
-            <i className="fi fi-rr-angle-small-down"></i>
-
-            <div className="abs-inside-navigating">
+            <i className="fi fi-rr-angle-small-down hidden"></i>
+            <div className="abs-inside-navigating hidden">
               <div className="d-flex g-36px">
                 <div className="d-flex column g-8px">
                   <h4 className="light size-16 color-opac medium">
@@ -159,7 +163,7 @@ export default function Header() {
         <NavLink to="/sign-in">
           <span>{t("account")}</span>
         </NavLink>
-        <button onClick={handleMenuToggle}>
+        <button onClick={handleMenuToggle} className="appear-min hidden">
           <i className="fi fi-rr-menu-dots-vertical size-16"></i>
         </button>
       </div>

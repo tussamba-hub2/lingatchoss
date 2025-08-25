@@ -225,7 +225,7 @@ export default function HomeServices() {
           <h3 className="size-20 extra-bold">
             {t("discover_service_categories")}
           </h3>
-          <NavLink className="hover-change-color d-flex items-center g-8px">
+          <NavLink className="hover-change-color d-flex items-center g-8px hidden">
             <span>{t("see_all")}</span>
             <i className="fi fi-rr-arrow-small-right"></i>
           </NavLink>

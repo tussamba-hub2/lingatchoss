@@ -220,6 +220,7 @@ i18n
           institutions: "Instituições",
           all_rights_reserved: "Todos os direitos reservados",
           contacts: "Contactos",
+          no_institutions_found: "Nenhuma instituição perto de si",
         },
       },
       en: {
@@ -422,6 +423,7 @@ i18n
           institutions: "Institutions",
           all_rights_reserved: "All rights reserved",
           contacts: "Contacts",
+          no_institutions_found: "No institutions near you",
         },
       },
       umb: {
@@ -631,6 +633,7 @@ i18n
           institutions: "Omanu asokiyo",
           all_rights_reserved: "Oluvile lwosi lwalipandike",
           contacts: "Ovakwetu",
+          no_institutions_found: "Ka viomboloxelo vyatwathiwe k'oku",
         },
       },
       fr: {
@@ -835,6 +838,7 @@ i18n
           institutions: "Institutions",
           all_rights_reserved: "Tous droits réservés",
           contacts: "Contacts",
+          no_institutions_found: "Aucune institution près de chez vous",
         },
       },
     },

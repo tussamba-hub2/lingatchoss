@@ -220,8 +220,8 @@ export default function HomeServices() {
 
   return (
     <section className="show-products-home">
-      <div className="d-flex column g-32px w-full rs-p-16">
-        <div className="d-flex items-center justify-between">
+      <div className="d-flex column g-32px w-full">
+        <div className="d-flex items-center justify-between rs-p-16">
           <h3 className="size-20 extra-bold">
             {t("discover_service_categories")}
           </h3>

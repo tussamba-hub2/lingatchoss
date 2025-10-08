@@ -246,7 +246,7 @@ export default function Cards() {
       </NavLink>
       <NavLink to="/" className="card d-flex column g-20px">
         <div className="d-flex column g-4px">
-          <h4 className="size-16 medium">{t("all_categories")}</h4>
+          <h4 className="size-16 medium">{t("all_cats")}</h4>
         </div>
         <div className="d-flex column g-4px">
           <h3 className="size-24 bold">

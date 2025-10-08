@@ -54,12 +54,12 @@ export default function EditService() {
     // Load categories and service data
     loadCategories();
     loadServiceData();
-  }, [serviceId]);
+  }, [serviceId, navigate]);
 
   // Reload categories when language changes
   useEffect(() => {
     loadCategories();
-  }, [i18n.language]);
+  }, []);
 
   const loadServiceData = async () => {
     try {
@@ -256,7 +256,7 @@ export default function EditService() {
       const fileName = `${Math.random().toString(36).substring(2)}.${fileExt}`;
       const filePath = `${session.user.id}/${fileName}`;
 
-      const { data, error } = await supabase.storage
+      const { /* data, */ error } = await supabase.storage
         .from("service-images")
         .upload(filePath, file);
 
@@ -524,7 +524,6 @@ export default function EditService() {
                   accept="image/*"
                   onChange={handleImageFileChange}
                   className="cool-input"
-                  disabled={formData.image_url !== ""}
                 />
               </div>
 
@@ -772,50 +771,129 @@ export default function EditService() {
   };
 
   return (
-    <div className="search-modal d-flex items-center justify-center g-20px column">
-      <div className="service-form d-flex items-center justify-center column g-12px p-16 relative">
-        <div className="d-flex column g-32px form-inside">
-          <div className="d-flex column g-4px">
-            <span className="text-secondary">{t("editService")}</span>
-            <h2 className="size-18 bold">{t("new_service")}</h2>
+    <div style={{ padding: 16, display: "grid", placeItems: "center" }}>
+      <div
+        style={{
+          width: "100%",
+          maxWidth: 920,
+          background: "#ffffff",
+          border: "1px solid #e2e8f0",
+          borderRadius: 12,
+          boxShadow: "0 6px 20px rgba(0,0,0,0.06)",
+          padding: 16,
+        }}
+      >
+        <div style={{ display: "grid", gap: 16 }}>
+          <div>
+            <button
+              type="button"
+              onClick={() => navigate(-1)}
+              style={{
+                background: "#f1f5f9",
+                color: "#0f172a",
+                padding: "8px 12px",
+                borderRadius: 8,
+                border: 0,
+                cursor: "pointer",
+              }}
+            >
+              ← {t("back") || "Voltar"}
+            </button>
+          </div>
+          <div style={{ display: "grid", gap: 4 }}>
+            <span style={{ color: "#64748b", fontSize: 14 }}>
+              {t("editService")}
+            </span>
+            <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>
+              {t("new_service")}
+            </h2>
           </div>
 
-          {error && <div className="error-message">{error}</div>}
+          {error && (
+            <div style={{ color: "#dc2626", fontSize: 14 }}>{error}</div>
+          )}
 
-          <form onSubmit={handleSubmit} className="service-form-content">
+          <form onSubmit={handleSubmit} style={{ display: "grid", gap: 16 }}>
             {renderStepContent()}
 
-            <div className="step-navigation">
-              {currentStep > 1 && (
-                <button type="button" onClick={prevStep} className="btn btn-br">
-                  {t("previous")}
-                </button>
-              )}
+            <div
+              style={{
+                display: "flex",
+                gap: 12,
+                justifyContent: "space-between",
+              }}
+            >
+              <div>
+                {currentStep > 1 && (
+                  <button
+                    type="button"
+                    onClick={prevStep}
+                    style={{
+                      background: "#f1f5f9",
+                      color: "#0f172a",
+                      padding: "10px 14px",
+                      borderRadius: 10,
+                      border: 0,
+                      cursor: "pointer",
+                    }}
+                  >
+                    {t("previous")}
+                  </button>
+                )}
+              </div>
 
               {currentStep < totalSteps ? (
-                <div className="d-flex items-center justify-end w-full">
+                <div>
                   <button
                     type="button"
                     onClick={nextStep}
                     disabled={!canProceedToNext()}
-                    className="btn btn-br btn-primary"
+                    style={{
+                      background:
+                        "linear-gradient(135deg,#0ea5e9 0%, #1d4ed8 100%)",
+                      color: "#ffffff",
+                      padding: "10px 14px",
+                      borderRadius: 10,
+                      border: 0,
+                      boxShadow: "0 6px 16px rgba(2,132,199,0.25)",
+                      cursor: !canProceedToNext() ? "not-allowed" : "pointer",
+                    }}
                   >
                     {t("next")}
                   </button>
                 </div>
               ) : (
-                <div className="d-flex items-center justify-end g-12px">
+                <div style={{ display: "flex", gap: 12 }}>
                   <button
                     type="button"
                     onClick={handleCancel}
-                    className="btn btn-br"
+                    style={{
+                      background: "#f1f5f9",
+                      color: "#0f172a",
+                      padding: "10px 14px",
+                      borderRadius: 10,
+                      border: 0,
+                      cursor: "pointer",
+                    }}
                   >
                     {t("cancel")}
                   </button>
                   <button
                     type="submit"
                     disabled={loading || !canProceedToNext()}
-                    className="btn btn-br btn-primary"
+                    style={{
+                      background:
+                        "linear-gradient(135deg,#16a34a 0%, #22c55e 100%)",
+                      color: "#ffffff",
+                      padding: "10px 14px",
+                      borderRadius: 10,
+                      border: 0,
+                      boxShadow: "0 6px 16px rgba(34,197,94,0.25)",
+                      cursor:
+                        loading || !canProceedToNext()
+                          ? "not-allowed"
+                          : "pointer",
+                    }}
                   >
                     {loading ? t("saving") : t("updateService")}
                   </button>
@@ -826,7 +904,6 @@ export default function EditService() {
         </div>
       </div>
 
-      {/* Category Modal */}
       {showAddCategory && (
         <Category
           onClose={() => setShowAddCategory(false)}

@@ -13,7 +13,7 @@ function Authentication() {
 
   const GOOGLE_ICON_SOURCE = "./assets/images/google-logo.svg";
   const VIDEO_SOURCE = "./assets/videos/beauty.mp4";
-  const LINGA_TCHOSS_LOGO_SOURCE = "./assets/images/app-logo.svg";
+  const LINGA_TCHOSS_LOGO_SOURCE = "./assets/images/app-logo.png";
 
   useEffect(() => {
     // Get initial session
@@ -79,7 +79,7 @@ function Authentication() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `https://tussamba-hub2.github.io/lingatchoss/details`,
+          redirectTo: window.location.origin,
         },
       });
 

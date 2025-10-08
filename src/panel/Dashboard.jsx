@@ -102,12 +102,12 @@ function Dashboard() {
     return (
       <div className="d-flex w-full h-full items-center justify-center">
         <div
-            className="d-flex items-center justify-center"
-            style={{ height: "280px" }}
-          >
-            <div className="loading-spinner"></div>
-            <span className="ml-8">{t("loading")}</span>
-          </div>
+          className="d-flex items-center justify-center"
+          style={{ height: "280px" }}
+        >
+          <div className="loading-spinner"></div>
+          <span className="ml-8">{t("loading")}</span>
+        </div>
       </div>
     );
   }
@@ -117,7 +117,7 @@ function Dashboard() {
       <Sidebar />
       <div className="d-flex column">
         <Navbar />
-        <div className="grid-overflow-content">
+        <div className="">
           <div className="d-flex column g-32px">
             <Cards />
             <Area />

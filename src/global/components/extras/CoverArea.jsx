@@ -1,51 +1,109 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 
 export default function CoverArea() {
+  const { t } = useTranslation();
+  const bg = "/assets/images/landing.jpg";
+  return (
+    <div
+      style={{
+        position: "relative",
+        minHeight: 820,
+        display: "flex",
+        alignItems: "center",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: `url(${bg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "brightness(0.4)",
+        }}
+      />
 
-    const { t } = useTranslation();
-    return (
-        <div className="cover-area-content relative">
-          <div className="d-flex">
-            <div className="d-flex column g-32px justify-center items-center">
-              <div className="d-flex column g-8px text-center items-center">
-                <h1 className="main-text extra-bold text-center">
-                  {t("main_text")}
-                </h1>
-                <p className="size-18 medium text-center mw-break">
-                  {t("secondary_text")}
-                </p>
-              </div>
-              <div className="d-flex items-center g-36px">
-                <NavLink to="/search" className="huge-btn">
-                  <i className="fi fi-rr-search"></i>
-                  <span className="nowrap">{t("explore_services")}</span>
-                </NavLink>
-                <NavLink to="/sign-in" className="huge-btn huge-br">
-                  <span className="nowrap">{t("company_account")}</span>
-                </NavLink>
-              </div>
-            </div>
-          </div>
-          <div className="abs-pointer d-flex">
-            <div className="d-flex relative g-4px">
-              <span className="spanner">{t('whatsapp')}</span>
-              <i className="fi fi-rr-location-arrow"></i>
-            </div>
-          </div>
-          <div className="abs-pointer two-pt d-flex">
-            <div className="d-flex relative g-4px">
-              <span className="spanner">{t('appointments')}</span>
-              <i className="fi fi-rr-location-arrow"></i>
-            </div>
-          </div>
-          <div className="abs-pointer three-pt d-flex">
-            <div className="d-flex relative g-4px">
-              <span className="spanner">{t('on_your_door')}</span>
-              <i className="fi fi-rr-location-arrow"></i>
-            </div>
+      <div
+        style={{
+          position: "relative",
+          zIndex: 1,
+          display: "grid",
+          gap: 16,
+          padding: 24,
+          width: "100%",
+          maxWidth: 1200,
+          color: "#ffffff",
+        }}
+      >
+        <div style={{ maxWidth: 960 }} className="d-flex column g-12px">
+          <h1
+            style={{
+              margin: 0,
+              fontSize: 28,
+              lineHeight: 1.25,
+              fontWeight: 800,
+              color: "#ffffff",
+              textAlign: "left",
+            }}
+          >
+            {t("main_text")}
+          </h1>
+          <p
+            style={{
+              margin: 0,
+              fontSize: 16,
+              opacity: 0.95,
+              color: "#ffffff",
+              textAlign: "left",
+            }}
+          >
+            {t("secondary_text")}
+          </p>
+
+          <div
+            style={{
+              display: "flex",
+              gap: 16,
+              justifyContent: "flex-start",
+              marginTop: 8,
+              flexWrap: "wrap",
+            }}
+          >
+            <NavLink
+              to="/search"
+              style={{
+                background: "linear-gradient(135deg,#0ea5e9 0%, #1d4ed8 100%)",
+                color: "#ffffff",
+                padding: "12px 18px",
+                borderRadius: 12,
+                boxShadow: "0 10px 26px rgba(2,132,199,0.35)",
+                fontWeight: 700,
+                textDecoration: "none",
+              }}
+            >
+              {t("explore_services")}
+            </NavLink>
+            <NavLink
+              to="/sign-in"
+              style={{
+                background: "rgba(255,255,255,0.12)",
+                color: "#ffffff",
+                padding: "12px 18px",
+                borderRadius: 12,
+                border: "1px solid rgba(255,255,255,0.35)",
+                backdropFilter: "blur(2px)",
+                fontWeight: 700,
+                textDecoration: "none",
+              }}
+            >
+              {t("company_account")}
+            </NavLink>
           </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }

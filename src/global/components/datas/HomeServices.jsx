@@ -204,19 +204,7 @@ export default function HomeServices() {
     if (userLocation) fetchNearbyServices();
   }, [userLocation, i18n.language, selectedCategory, searchTerm]);
 
-  function open_whatsapp(number, message = "") {
-    const clean_number = number.replace(/\D/g, "");
-    const url = `https://wa.me/${clean_number}?text=${encodeURIComponent(
-      message
-    )}`;
-    window.open(url, "_blank");
-  }
-
-  const handle_whastapp = (whatsapp_number, name, company_id) => {
-    // Prefixa o company_id antes da mensagem
-    const fullMessage = `${company_id} Olá, tenho interesse no serviço: ${name}`;
-    open_whatsapp(whatsapp_number, fullMessage);
-  };
+  
 
   return (
     <section className="show-products-home">
@@ -225,7 +213,7 @@ export default function HomeServices() {
           <h3 className="size-20 extra-bold">
             {t("discover_service_categories")}
           </h3>
-          <NavLink className="hover-change-color d-flex items-center g-8px hidden">
+          <NavLink to="/search" className="hover-change-color d-flex items-center g-8px hidden">
             <span>{t("see_all")}</span>
             <i className="fi fi-rr-arrow-small-right"></i>
           </NavLink>

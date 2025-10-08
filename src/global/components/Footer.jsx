@@ -10,11 +10,11 @@ export default function Footer() {
         <div className="d-flex column g-32px">
           <div className="d-flex items-center g-4px">
             <img
-              src="./assets/images/app-logo2.svg"
+              src="./assets/images/app-logo2.png"
               alt="App Logo"
               className="logo-img"
             />
-            <h3 className="footer-title">Linga Tchoss</h3>
+            <h3 className="footer-title">KARGA MIDIA, (SU), LDA</h3>
           </div>
           <p>
             {t('footer_p')}
@@ -26,17 +26,8 @@ export default function Footer() {
             <NavLink href="/" className="footer-link">
               {t("home")}
             </NavLink>
-            <NavLink href="/privacy-policy" className="footer-link">
-              {t("privacy_policies")}
-            </NavLink>
-            <NavLink href="/terms-of-service" className="footer-link">
-              {t("terms_of_use")}
-            </NavLink>
             <NavLink href="/" className="footer-link">
               {t("institutions")}
-            </NavLink>
-            <NavLink href="/" className="footer-link">
-              {t("about_us")}
             </NavLink>
           </div>
         </div>
@@ -55,22 +46,16 @@ export default function Footer() {
           <h4 className="medium size-16">{t("contacts")}</h4>
           <div className="d-flex column g-12px">
             <NavLink href="/about" className="footer-link">
-              {t("blog")}
+              +244 935 150 370
             </NavLink>
             <NavLink href="/about" className="footer-link">
-              {t("resources")}
-            </NavLink>
-            <NavLink href="/about" className="footer-link">
-              +244 900 000 000
-            </NavLink>
-            <NavLink href="/about" className="footer-link">
-              suport@lingatchoss.com
+              geral@lingatchoss.com
             </NavLink>
           </div>
         </div>
       </div>
 
-      <p className="abs-reserverd">© 2024 Linga Tchoss. {t("all_rights_reserved")}</p>
+      <p className="abs-reserverd">© 2024 KARGA MIDIA, (SU), LDA. {t("all_rights_reserved")}</p>
     </footer>
   );
 }

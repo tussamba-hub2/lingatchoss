@@ -1,15 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { supabase } from "../../../../supabaseClient";
 
-const appLogo = "./assets/images/app-logo.svg";
+const appLogo = "./assets/images/app-logo.png";
 
 export default function Institutions() {
   const { t } = useTranslation();
   const carrouselRef = useRef(null);
   const [userLocation, setUserLocation] = useState(null);
   const [institutions, setInstitutions] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const stored = localStorage.getItem("user_location");
@@ -181,6 +182,11 @@ export default function Institutions() {
     }
   };
 
+  const handleInstituitionClick = (id) => {
+    console.debug("Instituition clicked, ID:", id); // Debug message
+    navigate(`/instituition/${id}`);
+  };
+
   return (
     <div className="institutions-container padding-inside mt-100">
       <div className="d-flex column g-32px w-full">
@@ -204,8 +210,12 @@ export default function Institutions() {
               onMouseLeave={handleMouseUp}
             >
               {institutions.map((inst) => (
-                <NavLink key={inst.id} className="carousel-item">
-                  <div className="d-flex column g-12px">
+                <div
+                  key={inst.id}
+                  className="carousel-item"
+                  onClick={() => handleInstituitionClick(inst.id)}
+                >
+                  <NavLink className="d-flex column g-12px">
                     <img src={inst.avatarUrl || appLogo} alt={inst.name} />
                     <div className="d-flex column g-4px">
                       <h4 className="size-16 medium">{inst.name}</h4>
@@ -213,8 +223,8 @@ export default function Institutions() {
                         {inst.sectorName}
                       </span>
                     </div>
-                  </div>
-                </NavLink>
+                  </NavLink>
+                </div>
               ))}
             </div>
             <button

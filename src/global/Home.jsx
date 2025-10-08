@@ -8,6 +8,7 @@ import CoverArea from "./components/extras/CoverArea.jsx";
 import HomeServices from "./components/datas/HomeServices.jsx";
 import Institutions from "./components/extras/Insituitions.jsx";
 import Footer from "./components/Footer.jsx";
+import ServicesNear from "./components/extras/ServicesNear.jsx";
 
 export default function Home() {
   const [showLangSelection, setShowLangSelection] = useState(false);
@@ -31,6 +32,7 @@ export default function Home() {
 
       <main>
         <CoverArea />
+        <ServicesNear />
         <HomeServices />
         <Institutions />
         <Footer />

@@ -13,7 +13,7 @@ export default function SearchModal() {
             <div className="search-form d-flex column g-12px p-16 relative">
                 <div className="footer-search d-flex items-center justify-between">
                     <div className="d-flex items-center g-12px">
-                        <img src="./assets/images/app-logo.svg" alt="logo" />
+                        <img src="./assets/images/app-logo.png" alt="logo" />
                         <span className="size-12 bold">Linga Tchoss</span>
                     </div>
                     <button className='sm-some'>{t("close")}</button>

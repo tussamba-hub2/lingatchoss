@@ -7,8 +7,8 @@ export default function Services() {
   const [services, setServices] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm /* setSearchTerm */] = useState("");
+  const [selectedCategory /* setSelectedCategory */] = useState("all");
   const [filteredServices, setFilteredServices] = useState([]);
 
   useEffect(() => {
@@ -17,7 +17,21 @@ export default function Services() {
   }, []);
 
   useEffect(() => {
-    filterServices();
+    // inline filter to avoid extra dependency reference
+    let filtered = services;
+    if (searchTerm) {
+      filtered = filtered.filter(
+        (service) =>
+          service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          service.description?.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+    if (selectedCategory !== "all") {
+      filtered = filtered.filter(
+        (service) => service.categoryId === selectedCategory
+      );
+    }
+    setFilteredServices(filtered);
   }, [services, searchTerm, selectedCategory]);
 
   const loadServices = async () => {
@@ -115,28 +129,6 @@ export default function Services() {
     }
   };
 
-  const filterServices = () => {
-    let filtered = services;
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(
-        (service) =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          service.description?.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    // Filter by category
-    if (selectedCategory !== "all") {
-      filtered = filtered.filter(
-        (service) => service.categoryId === selectedCategory
-      );
-    }
-
-    setFilteredServices(filtered);
-  };
-
   const formatRelativeDate = (dateString) => {
     const date = new Date(dateString);
     const now = new Date();
@@ -157,38 +149,54 @@ export default function Services() {
   };
 
   return (
-    <div className="overflow-services d-flex column g-32px p-24">
-      <h5 className="medium size-18">
-        {t("services")}
-        {searchTerm && (
-          <span className="text-secondary size-14 ml-8">
-            - {t("searchResultsFor")} "{searchTerm}"
-          </span>
-        )}
-        {selectedCategory !== "all" && (
-          <span className="text-secondary size-14 ml-8">
-            - {t("filteredBy")}{" "}
-            {categories.find((cat) => cat.id === selectedCategory)?.name ||
-              t("category")}
-          </span>
-        )}
-      </h5>
+    <div style={{ display: "grid", gap: 16, padding: 16 }}>
+      <div>
+        <h5
+          style={{ margin: 0, fontSize: 18, fontWeight: 600, color: "#0f172a" }}
+        >
+          {t("services")}
+          {searchTerm && (
+            <span style={{ color: "#64748b", fontSize: 14, marginLeft: 8 }}>
+              - {t("searchResultsFor")} "{searchTerm}"
+            </span>
+          )}
+          {selectedCategory !== "all" && (
+            <span style={{ color: "#64748b", fontSize: 14, marginLeft: 8 }}>
+              - {t("filteredBy")}{" "}
+              {categories.find((cat) => cat.id === selectedCategory)?.name ||
+                t("category")}
+            </span>
+          )}
+        </h5>
+      </div>
 
       {loading ? (
         <div
-          className="d-flex items-center justify-center"
-          style={{ minHeight: "200px" }}
+          style={{
+            minHeight: 200,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <span className="size-14 text-secondary">{t("loadingServices")}</span>
+          <span style={{ fontSize: 14, color: "#64748b" }}>
+            {t("loadingServices")}
+          </span>
         </div>
       ) : filteredServices.length === 0 ? (
         <div
-          className="d-flex items-center justify-center"
-          style={{ minHeight: "200px" }}
+          style={{
+            minHeight: 200,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
         >
-          <div className="d-flex column items-center g-16px">
-            <i className="fi fi-sr-box size-48 text-secondary"></i>
-            <span className="size-14 text-secondary text-center">
+          <div style={{ display: "grid", gap: 16, justifyItems: "center" }}>
+            <span style={{ fontSize: 48, color: "#94a3b8" }}>⌂</span>
+            <span
+              style={{ fontSize: 14, color: "#64748b", textAlign: "center" }}
+            >
               {searchTerm || selectedCategory !== "all"
                 ? t("noServicesFoundWithFilters")
                 : t("noServicesRegistered")}
@@ -196,46 +204,91 @@ export default function Services() {
           </div>
         </div>
       ) : (
-        <div className="grid-services">
-          {filteredServices.map((service) => (
-            <div key={service.id} className="service-item d-flex column g-8px">
-              {service.imageUrl ? (
-                <div className="product-image">
-                  <img src={service.imageUrl} alt={service.name} />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+            gap: 16,
+          }}
+        >
+          {filteredServices.map((service) => {
+            const placeholder = "./assets/images/app-logo.png";
+            return (
+              <div
+                key={service.id}
+                style={{
+                  background: "#fff",
+                  border: "1px solid #e2e8f0",
+                  borderRadius: 12,
+                  overflow: "hidden",
+                  boxShadow: "0 6px 20px rgba(0,0,0,0.04)",
+                }}
+              >
+                <div
+                  style={{ width: "100%", height: 140, background: "#f1f5f9" }}
+                >
+                  <img
+                    src={service.imageUrl || placeholder}
+                    alt={service.name}
+                    loading="lazy"
+                    onError={(e) => {
+                      if (e.currentTarget.src !== placeholder)
+                        e.currentTarget.src = placeholder;
+                    }}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
                 </div>
-              ) : (
-                <div className="product-avatar">
-                  <i className="fi fi-sr-box"></i>
-                </div>
-              )}
-              <div className="d-flex items-center justify-between p-s-8">
-                <div className="d-flex column g-4px">
-                  <b className="medium size-14">
-                    {service.name.length > 16
-                      ? service.name.substring(0, 16) + "..."
-                      : service.name}
-                  </b>
-                  <span className="size-12 text-secondary">
-                    {service.categoryName}
-                  </span>
-                </div>
-                <div className="d-flex items-center g-8px">
-                  <div className="d-flex items-center g-4px opa-6">
-                    <i className="fi fi-sr-clock size-12"></i>
-                    <span className="size-12">
+                <div style={{ padding: 12, display: "grid", gap: 6 }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <b style={{ margin: 0, fontSize: 14, color: "#0f172a" }}>
+                      {service.name.length > 16
+                        ? service.name.substring(0, 16) + "..."
+                        : service.name}
+                    </b>
+                    <span style={{ fontSize: 12, color: "#64748b" }}>
                       {formatRelativeDate(service.createdAt)}
                     </span>
                   </div>
-                  <button
-                    className="btn btn-sm btn-br"
-                    onClick={() => handleEditService(service.id)}
+                  <div style={{ fontSize: 12, color: "#64748b" }}>
+                    {service.categoryName}
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 8,
+                      marginTop: 6,
+                    }}
                   >
-                    <i className="fi fi-rr-edit size-12"></i>
-                  </button>
+                    <button
+                      onClick={() => handleEditService(service.id)}
+                      style={{
+                        background: "#f1f5f9",
+                        padding: "8px 10px",
+                        borderRadius: 8,
+                        color: "#0f172a",
+                        fontWeight: 600,
+                        border: 0,
+                        cursor: "pointer",
+                      }}
+                    >
+                      {t("editService")}
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>

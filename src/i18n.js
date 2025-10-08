@@ -15,7 +15,14 @@ i18n
     resources: {
       pt: {
         translation: {
-          greetings_service: "Olá, tenho interesse no serviço: ",
+          healph_services: "Serviços de saúde",
+          education_services: "Serviços de educação e ensino",
+          pharmacy_services: "Serviços de farmácias",
+          supermarket_services: "Serviços de supermercado",
+          transport_services: "Serviços de transporte e Logística",
+          hotel_services: "Serviços de Hotelaria, restauração e Hospedagem",
+          more_by: "Mais de",
+          greetings_service: "quero marcar ",
           service: "Serviço",
           request_on_whastapp: "Solicitar no whatsapp",
           welcome: "Bem-vindo",
@@ -44,7 +51,7 @@ i18n
           institution: "Instituição",
           controlPanel: "Painel de controlo",
           search: "Pesquisar serviço/categoria",
-          all_categories: "Todas as categorias",
+          all_categories: "Todas os serviços",
           search_placeholder: "Pesquisar serviço",
           close: "Fechar",
           // Institution Details translations
@@ -200,9 +207,9 @@ i18n
           account: "Conta",
 
           main_text:
-            "Conectando você aos serviços que precisa, em qualquer lugar",
+            "Conectando você aos serviços que precisa, em qualquer lugar e em tempo real!",
           secondary_text:
-            "O Linga Tchoss é uma plataforma que reúne instituições e clientes em um só lugar. De farmácias a hospitais, de escolas a transportes, encontre e solicite serviços de forma rápida, prática e com entrega até sua porta",
+            "O Linga Tchoss da KARGA MIDIA, (SU), LDA é uma solução tecnológica que através desta plataforma e do atendimento automático no seu canal do whatsapp, reúne instituições credíveis que prestam seviços úteis e urgentes perto de si e em tempo real... Do ponto onde te encontras, com apenas Cinco cliques, terás as escola, fármacias, supermercados, transportes, lugares de hospedagem e restaurantes perto de si. Poupe dinheiro, tempo, energia e oportunidades usando a solução Linga Tchoss.",
           explore_services: "Explorar Serviços",
           whatsapp: "Whatsapp",
           appointments: "Agendamentos",
@@ -224,11 +231,38 @@ i18n
           all_rights_reserved: "Todos os direitos reservados",
           contacts: "Contactos",
           no_institutions_found: "Nenhuma instituição perto de si",
+          // Appointment details translations
+          back: "Voltar",
+          back_to_list: "Voltar à lista",
+          no_image: "Sem imagem",
+          price: "Preço",
+          client_phone: "Telefone do cliente",
+          created_at: "Criado em",
+          preferred_time: "Data preferencial",
+          status: "Estado",
+          notes: "Notas",
+          not_found: "Não encontrado",
+          confirm: "Confirmar",
+          view: "Ver",
+          updateProfile: "Atualizar perfil",
+          profileUpdated: "Perfil atualizado com sucesso",
+          // Instituition page
+          instituition_not_found: "Instituição não encontrada",
+          services_of_institution: "Serviços da instituição",
+          contact_institution: "Contactar no WhatsApp",
+          items: "itens",
         },
       },
       en: {
         translation: {
-          greetings_service: "Hello, I am interested in the service: ",
+          healph_services: "Health services",
+          education_services: "Education and teaching services",
+          pharmacy_services: "Pharmacy services",
+          supermarket_services: "Supermarket services",
+          transport_services: "Transport and logistics services",
+          hotel_services: "Hospitality, restaurant and lodging services",
+          more_by: "More by",
+          greetings_service: "i want to book ",
           service: "Service",
           request_on_whastapp: "Request on whatsapp",
           welcome: "Welcome",
@@ -256,7 +290,7 @@ i18n
           institution: "Institution",
           controlPanel: "Control Panel",
           search: "Search service/category",
-          all_categories: "All categories",
+          all_categories: "All services",
           search_placeholder: "Search service",
           close: "Close",
           // Institution Details translations
@@ -406,10 +440,11 @@ i18n
 
           account: "Account",
 
-          main_text: "Connecting you to the services you need, anywhere",
+          main_text:
+            "Connecting you to the services you need, anywhere in real time!",
 
           secondary_text:
-            "Linga Tchoss is a platform that brings together institutions and clients in one place. From pharmacies to hospitals, from schools to transport services — find and request services quickly, easily, and with delivery right to your door.",
+            "O Linga Tchoss ya KARGA MIDIA, (SU), LDA olombembwa yovakwikila vatangi, eyi kovakule kuyiya ombembwa eyi pamwe na okutambula kovakule voku whatsapp vali, okuti otchitava ovilonga vyovokombela vyokuhupika navyo vyatambula esilonga okukwata. Okuvalivala p’epanda ove wahala, kovatano vya cliques vitano vali, ove otava okulonga esekola, ofármacias, osupermercados, otransportes, ovilinga vyokukwata esekulu navyo orestaurantes vali p’epanda ove. Yambula ovipango, esikwata, ovitwiya navyo ombembwa vyokukwata eci Linga Tchoss.",
           explore_services: "Explore Services",
 
           whatsapp: "Whatsapp",
@@ -430,11 +465,38 @@ i18n
           all_rights_reserved: "All rights reserved",
           contacts: "Contacts",
           no_institutions_found: "No institutions near you",
+          // Appointment details translations
+          back: "Back",
+          back_to_list: "Back to list",
+          no_image: "No image",
+          price: "Price",
+          client_phone: "Client phone",
+          created_at: "Created at",
+          preferred_time: "Preferred date",
+          status: "Status",
+          notes: "Notes",
+          not_found: "Not found",
+          confirm: "Confirm",
+          view: "View",
+          updateProfile: "Update profile",
+          profileUpdated: "Profile updated successfully",
+          // Instituition page
+          instituition_not_found: "Institution not found",
+          services_of_institution: "Institution services",
+          contact_institution: "Contact on WhatsApp",
+          items: "items",
         },
       },
       umb: {
         translation: {
-          greetings_service: "Weyi, ndina okulinga kusanja: ",
+          healph_services: "Ovilonga vyokulikwata esanje",
+          education_services: "Ovilonga vyokukwata esekola no kufundila",
+          pharmacy_services: "Ovilonga vyofármacia",
+          supermarket_services: "Ovilonga vyosupermercado",
+          transport_services: "Ovilonga vyotransporte no Logística",
+          hotel_services: "Ovilonga vyohotelaria, okulyakula no ohospedagem",
+          more_by: "Okuti",
+          greetings_service: "ndinge okulombolola ",
           service: "Ondaka",
           request_on_whastapp: "Twala k'okuti WhatsApp",
           welcome: "Ukomwua",
@@ -463,7 +525,7 @@ i18n
           institution: "Etya/Viomboloxelo",
           controlPanel: "Elunga lyo kulongolola",
           search: "Twala ovipesu/visanju",
-          all_categories: "Ovipande vyoseni",
+          all_categories: "Ovipuka vyosi",
           search_placeholder: "Twala ovisanju",
           close: "Feka",
 
@@ -619,10 +681,10 @@ i18n
           account: "Ekonto",
 
           main_text:
-            "Okuyokiya kwenda kuvisanje vyowi ulomboloka, koko kuli osi",
+            "Okuyokiya kwenda kuvisanje vyowi ulomboloka, koko kuli osi Okuti kwenda vali!",
 
           secondary_text:
-            "Linga Tchoss olombolwilo yokulitegua eyi okutwala ovilonga kwenda avalipwa pamoko. Tula ovifarmacya kwenda ovilonga vy’ohopitalu, ovikola kwenda ovitranporti – fena ovilonga kwenda okuvilomboloka kwenjele, kavava, kwenda vyaletiwa kuli wowo.",
+            "Linga Tchoss wa KARGA MIDIA, (SU), LDA olombolwilo yokulitegua eyi okutwala ovilonga kwenda avalipwa pamoko. Tula ovifarmacya kwenda ovilonga vy’ohopitalu, ovikola kwenda ovitranporti – fena ovilonga kwenda okuvilomboloka kwenjele, kavava, kwenda vyaletiwa kuli wowo.",
           explore_services: "Tandulula Ovisanju",
 
           whatsapp: "Whatsapp",
@@ -643,11 +705,39 @@ i18n
           all_rights_reserved: "Oluvile lwosi lwalipandike",
           contacts: "Ovakwetu",
           no_institutions_found: "Ka viomboloxelo vyatwathiwe k'oku",
+          // Appointment details translations
+          back: "Komboka",
+          back_to_list: "Komboka kulipandiso",
+          no_image: "Ka eci",
+          price: "Ondaleka",
+          client_phone: "Onomero ya klandente",
+          created_at: "Yatundilwe k'oku",
+          preferred_time: "Eci yo kusola",
+          status: "Ondunge",
+          notes: "Ovipande",
+          not_found: "Kaviwathiwe",
+          confirm: "Okukwata",
+          view: "Okutala",
+          updateProfile: "Okwaha ekonto",
+          profileUpdated: "Perfil oti kwahile",
+          // Instituition page
+          instituition_not_found: "Etya kaviwathiwe",
+          services_of_institution: "Ovisanju vy’etya",
+          contact_institution: "Kontakto k’O WhatsApp",
+          items: "itens",
         },
       },
       fr: {
         translation: {
-          greetings_service: "Bonjour, je suis intéressé par le service: ",
+          healph_services: "Services de santé",
+          education_services: "Services d’éducation et d’enseignement",
+          pharmacy_services: "Services de pharmacies",
+          supermarket_services: "Services de supermarché",
+          transport_services: "Transport and logistics services",
+          hotel_services:
+            "Services d’hôtellerie, de restauration et d’hébergement",
+          more_by: "Plus par",
+          greetings_service: "je veux réserver ",
           service: "Service",
           request_on_whastapp: "Demander sur WhatsApp",
           welcome: "Bienvenue",
@@ -675,7 +765,7 @@ i18n
           institution: "Institution",
           controlPanel: "Panneau de contrôle",
           search: "Rechercher un service/catégorie",
-          all_categories: "Toutes les catégories",
+          all_categories: "Toutes les services",
           search_placeholder: "Rechercher un service",
           close: "Fermer",
 
@@ -836,9 +926,9 @@ i18n
 
           account: "Compte",
           main_text:
-            "Vous connecter aux services dont vous avez besoin, partout",
+            "Vous connecter aux services dont vous avez besoin, partout En temps réel!",
           secondary_text:
-            "Linga Tchoss est une plateforme qui regroupe institutions et clients en un seul endroit. Des pharmacies aux hôpitaux, des écoles aux transports, trouvez et demandez des services rapidement, facilement et avec livraison à votre porte.",
+            "Le Linga Tchoss de KARGA MIDIA, (SU), LDA est une solution technologique qui, à travers cette plateforme et le service automatique sur son canal WhatsApp, regroupe des institutions crédibles qui offrent des services utiles et urgents près de vous et en temps réel... À partir de l’endroit où vous vous trouvez, avec seulement cinq clics, vous aurez les écoles, pharmacies, supermarchés, transports, lieux d’hébergement et restaurants proches de vous. Économisez de l’argent, du temps, de l’énergie et des opportunités en utilisant la solution Linga Tchoss.",
           explore_services: "Explorer les Services",
           see_all: "Voir tout",
           discover_service_categories: "Découvrir les catégories de services",
@@ -855,6 +945,26 @@ i18n
           all_rights_reserved: "Tous droits réservés",
           contacts: "Contacts",
           no_institutions_found: "Aucune institution près de chez vous",
+          // Appointment details translations
+          back: "Retour",
+          back_to_list: "Retour à la liste",
+          no_image: "Pas d'image",
+          price: "Prix",
+          client_phone: "Téléphone du client",
+          created_at: "Créé le",
+          preferred_time: "Date préférentielle",
+          status: "Statut",
+          notes: "Notes",
+          not_found: "Introuvable",
+          confirm: "Confirmer",
+          view: "Voir",
+          updateProfile: "Mettre à jour le profil",
+          profileUpdated: "Profil mis à jour avec succès",
+          // Instituition page
+          instituition_not_found: "Institution introuvable",
+          services_of_institution: "Services de l’institution",
+          contact_institution: "Contacter sur WhatsApp",
+          items: "articles",
         },
       },
     },

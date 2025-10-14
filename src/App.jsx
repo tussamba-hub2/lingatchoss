@@ -11,11 +11,12 @@ import Appointments from "./panel/Appointments.jsx";
 import Services from "./panel/Services.jsx";
 import Settings from "./panel/Settings.jsx";
 import Appointment from "./components/details/Appointment.jsx";
+import Enterprises from "./global/Enterprises.jsx";
 
 function App() {
   return (
     <Routes>
-      <Route path="/sign-in" element={<Authentication />} />
+      <Route path="/siadsadgn-asdadagdfgsdinadsadaslgfmd" element={<Authentication />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/appointments" element={<Appointments />} />
       <Route path="/services" element={<Services />} />
@@ -25,6 +26,7 @@ function App() {
       <Route path="/edit-service/:serviceId" element={<EditService />} />
       <Route path="/service/:serviceId" element={<Service />} />
       <Route path="/" element={<Home />} />
+      <Route path="/enterprises" element={<Enterprises />} />
       <Route path="/search" element={<SearchServices />} />
       <Route path="/instituition/:id" element={<Instituition />} />
     </Routes>

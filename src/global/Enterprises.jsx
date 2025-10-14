@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Header from "./components/Header";
-import Services from "./components/datas/Services";
+import LangSelection from "./components/lang/LangSelection";
 import Footer from "./components/Footer";
+import Institutions from "./components/extras/Insituitions";
 
-export default function SearchServices() {
-  const { t } = useTranslation();
 
-  const [showLangSelection, setShowLangSelection] = useState(false);
+export default function Enterprises() {
+    const [showLangSelection, setShowLangSelection] = useState(false);
 
   const containerRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
@@ -45,13 +45,17 @@ export default function SearchServices() {
     setShowLangSelection(false);
   };
 
+  const { t } = useTranslation();
   return (
-    <div className="home-container hover-contenting back-header" ref={containerRef}>
-        <Header scrolled={scrolled} />
-        <main className="mt-100">
-            <Services />
-            <Footer />  
-        </main>
+    <div className="home-container hover-contenting back-header " ref={containerRef}>
+      {showLangSelection && <LangSelection onLangSelect={handleLangSelect} />}
+      <Header scrolled={scrolled} />
+
+      <main>
+        <Institutions />
+        <Footer />
+      </main>
+
     </div>
-  );
+    )
 }

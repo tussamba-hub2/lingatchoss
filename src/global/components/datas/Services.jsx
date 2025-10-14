@@ -228,26 +228,9 @@ export default function Services() {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <div className="d-flex items-center wrap g-20px categories-classes">
-            <button
-              className={selectedCategory === "all" ? "active" : ""}
-              onClick={() => setSelectedCategory("all")}
-            >
-              {t("all_categories")}
-            </button>
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                className={selectedCategory === cat.id ? "active" : ""}
-                onClick={() => setSelectedCategory(cat.id)}
-              >
-                {cat.name}
-              </button>
-            ))}
-          </div>
         </div>
       </div>
-      <section className="show-products-home mt-0">
+      <section className="show-products-home">
         <div className="d-flex column g-32px w-full">
           <div className="d-flex w-full">
             {loading ? (
@@ -273,43 +256,48 @@ export default function Services() {
               <div className="services-gridden w-full">
                 {services.map((service) => (
                   <button
-                    onClick={
-                      () => navigate(`/service/${service.id}`) // Passa o ID do serviço para a rota
-                    }
-                    key={service.id}
-                    className="service-item d-flex column g-8px relative"
-                  >
-                    {service.imageUrl ? (
-                      <div className="product-image">
-                        <img src={service.imageUrl} alt={service.name} />
-                      </div>
-                    ) : (
-                      <div className="product-avatar">
-                        <i className="fi fi-sr-box"></i>
-                      </div>
-                    )}
-                    <div className="d-flex items-center justify-between p-s-8">
-                      <div className="d-flex column g-4px">
-                        <b className="medium size-16">
-                          {service.name.length > 16
-                            ? service.name.substring(0, 16) + "..."
+                  onClick={
+                    () => navigate(`/service/${service.id}`) // Passa o ID do serviço para a rota
+                  }
+                  key={service.id}
+                  className="service-item d-flex column g-4px relative"
+                >
+                  {service.imageUrl ? (
+                    <div className="image-prod">
+                      <img src={service.imageUrl} alt={service.name} />
+                    </div>
+                  ) : (
+                    <div className="product-avatar">
+                      <i className="fi fi-sr-box"></i>
+                    </div>
+                  )}
+                  <div className="d-flex items-center justify-between p-12 p-s-8">
+                    <div className="d-flex column g-4px w-full">
+                      <div className="d-flex items-center justify-between w-full">
+                        <b className="bold size-14">
+                            {service.name.length > 16
+                            ? service.name.substring(0, 20) + "."
                             : service.name}
                         </b>
-                        <span className="color-opac size-12 d-flex items-center g-4px">
-                          <i className="fi fi-rr-marker color-opac"></i>
-                          <span className="color-opac size-12">
-                            {service.institutionName}
-                          </span>
-                          {service.plan_id && (
-                            <span className="pro-inst">PRO</span>
-                          )}
-                        </span>
-                        <span className="abs-inst-name">
-                          {service.price} kz
+                        <span className="size-14 bold">
+                        {service.price.toLocaleString('pt-BR', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        })}
                         </span>
                       </div>
+                      <span className="color-opac size-12 d-flex items-center g-4px">
+                        <span className="color-opac size-12">
+                          {service.institutionName}
+                        </span>
+                        {service.plan_id && (
+                          <span className="pro-inst">PRO</span>
+                        )}
+                      </span>
+                      
                     </div>
-                  </button>
+                  </div>
+                </button>
                 ))}
               </div>
             )}

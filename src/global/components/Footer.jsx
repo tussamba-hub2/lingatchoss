@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 export default function Footer() {
   const { t } = useTranslation();
   return (
-    <footer className="footer-container relative">
+    <footer id="contacts" className="footer-container relative">
       <div className="footer-content">
         <div className="d-flex column g-32px">
           <div className="d-flex items-center g-4px">
@@ -26,19 +26,16 @@ export default function Footer() {
             <NavLink href="/" className="footer-link">
               {t("home")}
             </NavLink>
-            <NavLink href="/" className="footer-link">
-              {t("institutions")}
+            <NavLink href="/search" className="footer-link">
+              {t("search")}
             </NavLink>
           </div>
         </div>
         <div className="d-flex column g-32px">
           <h4 className="medium size-16">{t("companies")}</h4>
           <div className="d-flex column g-12px">
-            <NavLink href="/sign-in" className="footer-link">
+            <NavLink to="https://wa.me/244923852407" target="_blank" className="footer-link">
               {t("sign_up")}
-            </NavLink>
-            <NavLink href="/sign-in" className="footer-link">
-              {t("sign_in")}
             </NavLink>
           </div>
         </div>

@@ -15,6 +15,93 @@ i18n
     resources: {
       pt: {
         translation: {
+          faqs: [
+            {
+              question: "O que é o Linga Tchoss?",
+              answer:
+                "O Linga Tchoss é uma plataforma digital que conecta empresas e clientes em um único espaço. Farmácias, hospitais, escolas, transportes e outros serviços podem oferecer seus atendimentos e produtos diretamente aos usuários, com suporte a geolocalização e atendimento via WhatsApp.",
+            },
+            {
+              question:
+                "Como as empresas podem criar uma conta no Linga Tchoss?",
+              answer:
+                "O cadastro de empresas é feito manualmente pelo administrador da plataforma. Para solicitar a criação de uma conta, a instituição deve entrar em contato pelo WhatsApp disponível na seção “Contactos”. Após a verificação, o administrador criará o acesso e enviará os dados de login.",
+            },
+            {
+              question: "Como os clientes utilizam o Linga Tchoss?",
+              answer:
+                "Os clientes podem procurar instituições, visualizar serviços disponíveis e entrar em contato diretamente pelo WhatsApp. Também podem solicitar entregas, marcar consultas ou pedir informações de forma rápida e prática.",
+            },
+            {
+              question:
+                "Posso marcar consultas ou solicitar serviços pelo WhatsApp?",
+              answer:
+                "Sim. O Linga Tchoss integra um assistente inteligente que entende sua mensagem e ajuda a marcar consultas, solicitar serviços ou tirar dúvidas diretamente pelo WhatsApp.",
+            },
+            {
+              question: "O serviço tem custo para o cliente?",
+              answer:
+                "O acesso ao Linga Tchoss é totalmente gratuito para os clientes. Apenas as instituições que desejarem mais visibilidade ou recursos avançados poderão optar por planos pagos.",
+            },
+            {
+              question: "Que tipos de serviços posso encontrar?",
+              answer:
+                "No Linga Tchoss você encontra serviços de saúde, educação, transportes, entregas, compras e muito mais. A plataforma é atualizada constantemente com novas empresas e setores.",
+            },
+            {
+              question: "Como a plataforma protege meus dados?",
+              answer:
+                "O Linga Tchoss utiliza autenticação segura e criptografia para proteger os dados de usuários e empresas. Nenhuma informação é compartilhada sem consentimento e seguimos políticas de privacidade rigorosas.",
+            },
+            {
+              question: "Posso alterar ou cancelar um pedido feito?",
+              answer:
+                "Sim. Você pode entrar em contato com a empresa diretamente pelo WhatsApp para alterar ou cancelar pedidos, conforme a política de cada instituição.",
+            },
+            {
+              question: "Como relatar um problema técnico na plataforma?",
+              answer:
+                "Caso encontre algum problema técnico, vá até a seção “Contactos” e envie uma mensagem pelo WhatsApp. Nossa equipe de suporte verificará e solucionará o problema o mais rápido possível.",
+            },
+            {
+              question: "O Linga Tchoss está disponível em todo o país?",
+              answer:
+                "Sim. Qualquer instituição pode ser adicionada, independentemente da província. O sistema utiliza geolocalização para exibir os serviços mais próximos de cada usuário.",
+            },
+          ],
+          _faqs: "Perguntas Frequentes",
+          _home: "Início",
+          _services: "Serviços",
+          _about: "Sobre",
+          _companies: "Empresas",
+          _contacts: "Contactos",
+          innovation: "Inovação",
+          innovation_desc:
+            "Criamos soluções modernas que transformam a forma como pessoas e empresas se conectam e interagem todos os dias.",
+
+          accessibility: "Acessibilidade",
+          accessibility_desc:
+            "Facilitamos o acesso aos serviços essenciais, tornando a tecnologia simples, útil e disponível para todos.",
+
+          trust: "Confiança",
+          trust_desc:
+            "Valorizamos relações transparentes e seguras entre empresas e clientes, garantindo credibilidade e respeito.",
+
+          digital_inclusion: "Inclusão Digital",
+          digital_inclusion_desc:
+            "Promovemos igualdade no acesso às ferramentas digitais, ajudando comunidades a crescer no ambiente online.",
+          values_in_action: "Nossos Valores em Ação",
+          about_title: "Sobre o Linga Tchoss",
+          values_title: "Nossos valores",
+          values_text:
+            "No Linga Tchoss, acreditamos em quatro pilares fundamentais: Inovação, Acessibilidade, Confiança e Inclusão Digital. Trabalhamos todos os dias para criar soluções tecnológicas que aproximam empresas e pessoas, promovendo um futuro mais conectado e justo para todos.",
+          vision_title: "Nossa visão",
+          vision_text:
+            "Ser a principal plataforma digital de Angola, reconhecida por aproximar pessoas e instituições, transformando a forma como o país acessa serviços essenciais e promove o desenvolvimento através da tecnologia.",
+          mission_title: "Nossa missão",
+          mission_text:
+            "O Linga Tchoss tem como missão conectar empresas e pessoas em toda Angola, facilitando o acesso a serviços essenciais como saúde, educação e transporte com apenas um clique. Acreditamos em uma Angola mais digital, acessível e unida através da tecnologia.",
+          language: "Língua",
           healph_services: "Serviços de saúde",
           education_services: "Serviços de educação e ensino",
           pharmacy_services: "Serviços de farmácias",
@@ -25,7 +112,7 @@ i18n
           greetings_service: "quero marcar ",
           service: "Serviço",
           request_on_whastapp: "Solicitar no whatsapp",
-          welcome: "Bem-vindo",
+          welcome: "Conectando aos serviços perto de si!",
           login: "Iniciar sessão no Linga Tchoss",
           forInstitutions: "para Instituições",
           loginWithManagedAccount:
@@ -209,7 +296,7 @@ i18n
           main_text:
             "Conectando você aos serviços que precisa, em qualquer lugar e em tempo real!",
           secondary_text:
-            "O Linga Tchoss da KARGA MIDIA, (SU), LDA é uma solução tecnológica que através desta plataforma e do atendimento automático no seu canal do whatsapp, reúne instituições credíveis que prestam seviços úteis e urgentes perto de si e em tempo real... Do ponto onde te encontras, com apenas Cinco cliques, terás as escola, fármacias, supermercados, transportes, lugares de hospedagem e restaurantes perto de si. Poupe dinheiro, tempo, energia e oportunidades usando a solução Linga Tchoss.",
+            "Linga Tchoss é uma plataforma da KARGA MIDIA que, via WhatsApp, conecta você a escolas, farmácias, supermercados, transportes, hospedagens e restaurantes próximos, com apenas cinco cliques.",
           explore_services: "Explorar Serviços",
           whatsapp: "Whatsapp",
           appointments: "Agendamentos",
@@ -255,6 +342,92 @@ i18n
       },
       en: {
         translation: {
+          faqs: [
+            {
+              question: "What is Linga Tchoss?",
+              answer:
+                "Linga Tchoss is a digital platform that connects businesses and customers in one place. Pharmacies, hospitals, schools, transport and other services can offer their products and services directly to users, with geolocation and WhatsApp support.",
+            },
+            {
+              question: "How can companies create an account on Linga Tchoss?",
+              answer:
+                "Company registration is done manually by the platform administrator. To request an account, institutions must contact via WhatsApp in the 'Contacts' section. After verification, the administrator will create access and send login details.",
+            },
+            {
+              question: "How do customers use Linga Tchoss?",
+              answer:
+                "Customers can search for institutions, view available services, and contact them directly via WhatsApp. They can also request deliveries, schedule appointments, or get information easily.",
+            },
+            {
+              question:
+                "Can I book appointments or request services via WhatsApp?",
+              answer:
+                "Yes. Linga Tchoss integrates an intelligent assistant that understands your message and helps you schedule appointments, request services, or answer questions directly through WhatsApp.",
+            },
+            {
+              question: "Does the service cost anything for customers?",
+              answer:
+                "Access to Linga Tchoss is completely free for customers. Only institutions that want more visibility or advanced features can subscribe to paid plans.",
+            },
+            {
+              question: "What types of services can I find?",
+              answer:
+                "You can find healthcare, education, transport, delivery, and shopping services on Linga Tchoss. The platform is constantly updated with new businesses and sectors.",
+            },
+            {
+              question: "How does the platform protect my data?",
+              answer:
+                "Linga Tchoss uses secure authentication and encryption to protect user and company data. No information is shared without consent, and strict privacy policies are followed.",
+            },
+            {
+              question: "Can I modify or cancel a request?",
+              answer:
+                "Yes. You can contact the company directly via WhatsApp to modify or cancel requests, according to each institution’s policy.",
+            },
+            {
+              question: "How can I report a technical issue?",
+              answer:
+                "If you experience any technical issues, go to the 'Contacts' section and send us a message on WhatsApp. Our support team will solve it as soon as possible.",
+            },
+            {
+              question: "Is Linga Tchoss available nationwide?",
+              answer:
+                "Yes. Any institution can be added, regardless of province. The system uses geolocation to show services closest to each user.",
+            },
+          ],
+          _faqs: "Frequently Asked Questions",
+          _home: "Home",
+          _services: "Services",
+          _about: "About",
+          _companies: "Companies",
+          _contacts: "Contacts",
+          innovation: "Innovation",
+          innovation_desc:
+            "We create modern solutions that transform how people and businesses connect and interact every day.",
+
+          accessibility: "Accessibility",
+          accessibility_desc:
+            "We make essential services easy to access, keeping technology simple, useful, and available to everyone.",
+
+          trust: "Trust",
+          trust_desc:
+            "We value transparency and security, building strong relationships between companies and clients.",
+
+          digital_inclusion: "Digital Inclusion",
+          digital_inclusion_desc:
+            "We promote equal access to digital tools, helping communities grow and thrive in the online world.",
+          values_in_action: "Our Values in Action",
+          about_title: "About Linga Tchoss",
+          values_title: "Our values",
+          values_text:
+            "At Linga Tchoss, we believe in four core pillars: Innovation, Accessibility, Trust, and Digital Inclusion. We work every day to build technological solutions that bring businesses and people closer together, promoting a more connected and fair future for everyone.",
+          vision_title: "Our vision",
+          vision_text:
+            "To be Angola’s leading digital platform, recognized for bringing people and institutions closer together, transforming the way the country accesses essential services and drives development through technology.",
+          mission_title: "Our mission",
+          mission_text:
+            "Linga Tchoss aims to connect businesses and people across Angola, making access to essential services like healthcare, education, and transport easier with just one click. We believe in a more digital, accessible, and united Angola through technology.",
+          language: "Language",
           healph_services: "Health services",
           education_services: "Education and teaching services",
           pharmacy_services: "Pharmacy services",
@@ -265,7 +438,7 @@ i18n
           greetings_service: "i want to book ",
           service: "Service",
           request_on_whastapp: "Request on whatsapp",
-          welcome: "Welcome",
+          welcome: "Conecting to the services near you!",
           login: "Login to Linga Tchoss for Institutions",
           forInstitutions: "for Institutions",
           loginWithManagedAccount: "Login with a Linga Tchoss managed account",
@@ -444,7 +617,7 @@ i18n
             "Connecting you to the services you need, anywhere in real time!",
 
           secondary_text:
-            "O Linga Tchoss ya KARGA MIDIA, (SU), LDA olombembwa yovakwikila vatangi, eyi kovakule kuyiya ombembwa eyi pamwe na okutambula kovakule voku whatsapp vali, okuti otchitava ovilonga vyovokombela vyokuhupika navyo vyatambula esilonga okukwata. Okuvalivala p’epanda ove wahala, kovatano vya cliques vitano vali, ove otava okulonga esekola, ofármacias, osupermercados, otransportes, ovilinga vyokukwata esekulu navyo orestaurantes vali p’epanda ove. Yambula ovipango, esikwata, ovitwiya navyo ombembwa vyokukwata eci Linga Tchoss.",
+            "Linga Tchoss is a platform by KARGA MIDIA that, via WhatsApp, connects you to nearby schools, pharmacies, supermarkets, transport, accommodations, and restaurants in just five clicks.",
           explore_services: "Explore Services",
 
           whatsapp: "Whatsapp",
@@ -489,6 +662,93 @@ i18n
       },
       umb: {
         translation: {
+          faqs: [
+            {
+              question: "Linga Tchoss olombwene k'ey?",
+              answer:
+                "Linga Tchoss olombwene k’ombela yokupanga okuti ovasili pamwe na ovakwate. Ovafármasia, ovahospitali, ovakoléji na ovakalunga vakwete esengele okuhala avali pamwe na omanu k’epata limwe, vali na WhatsApp oha olondunge lwa geolocalização.",
+            },
+            {
+              question:
+                "Ovakalunga vakwete eteke lyokutala k’okalunga Linga Tchoss olombwene?",
+              answer:
+                "Eteke lyokutala likwete k’okupangwa kwa ofeteka lya Linga Tchoss. Okukwata, vakwete okuhambela WhatsApp k’esima 'Contactos'. Feteka lyokupanda olondunge, likwate okupeha eteke lyo acesso.",
+            },
+            {
+              question:
+                "Ovakwate vakwete okuhala Linga Tchoss valipate shimbwi?",
+              answer:
+                "Ovakwate vakwete okuhalela ovakalunga, vakulipata esengele, na vakwate okuhambela vala kupita WhatsApp. Vakwete okuhumana okukwata esengele, okuhupitha oconsultas, na okwelela oinfo wa pepaya.",
+            },
+            {
+              question: "Ngayi vakwete okuhupitha oconsultas kupita WhatsApp?",
+              answer:
+                "Ee. Linga Tchoss olombwene na assistente yolombwene yolokuti, yehupa ovakwate okukwata na ovakalunga okuhupitha oconsultas na ovakasi va vala WhatsApp.",
+            },
+            {
+              question: "Esengele lyali li na k’osema?",
+              answer:
+                "Linga Tchoss li pange k’osema kwa ovakwate. Ovakalunga vakwete okusalela osima va li na planos va okwelela esengele va vala lya kuoneka elipo.",
+            },
+            {
+              question: "Ovasele esengele vali valipate k’oling?",
+              answer:
+                "Linga Tchoss vali vali na ovasele vya saúde, educação, transporte, entregas na ovasele vyokutala. Osite lisumbulula ovakalunga ovapala kuvala posi.",
+            },
+            {
+              question: "Okalunga li pange k’osemana kudiva kwange?",
+              answer:
+                "Linga Tchoss li pange na ovipange vyokupangula kuvalela kudiva kwa ovakwate na ovakalunga. Elitava lyali li na kudiva kovakwate okuti.",
+            },
+            {
+              question: "Ngayi vakwete okuhupitha oserviço kwandje?",
+              answer:
+                "Ee. Vakwe okwelela ovakalunga okuhupitha WhatsApp, vakwete okuhindula oserviço valipele valimbwate esengele.",
+            },
+            {
+              question: "Ngayi vakwete okuleka oshike shikwete?",
+              answer:
+                "Okuleka oshike shikwete, vakwe okuhambela esima 'Contactos' vakwete okupa ombinga kupita WhatsApp. Okalunga k’efeteka li t’ehupitha oshike oshonene.",
+            },
+            {
+              question: "Linga Tchoss li li po Angolayosi yosima?",
+              answer:
+                "Ee. Ovakalunga vosima vakwete okuvalela. Linga Tchoss li pange na geolocalização okuhupa ovakalunga vava posi.",
+            },
+          ],
+          _faqs: "Ombinga dzokupulika kovanda",
+          _home: "Onjo",
+          _services: "Ovasele",
+          _about: "Ohandi",
+          _companies: "Ovakalunga",
+          _contacts: "Ovapandji",
+          innovation: "Okupanga vyovipange",
+          innovation_desc:
+            "Tupanga ovipange vipya vyokuhupitha esimbi lyokuhupitha ovakwate na ovakalunga posi k’omanu vosi.",
+
+          accessibility: "Okupitavala",
+          accessibility_desc:
+            "Tuvala ovasele vya kuvalela ovakwate, eteknologia li pange kupangwa, kuyandama na kuvalela vosi.",
+
+          trust: "Ekoloto",
+          trust_desc:
+            "Tuholela ekoloto na etetululo, okutula esimbi lyokutwelela kovakalunga na ovakwate.",
+
+          digital_inclusion: "Okutumbuluka yolombwene",
+          digital_inclusion_desc:
+            "Tuvala okutumbuluka k’okuhupitha ovipange vyoteknologia, okuhupitha ovakwate vosi posi yolombwene.",
+          values_in_action: "Ovatunda vyetu k’okuhupitha",
+          about_title: "Ohandi Linga Tchoss",
+          values_title: "Ovatunda vyetu",
+          values_text:
+            "Linga Tchoss li holela ovatunda vikende: Okupanga vyovipange, Okupitavala, Ekoloto na Okutumbuluka yolombwene. Tuhupitha ovipange vyoteknologia okuvalela ovakalunga na ovakwate, okutula Angola yomoko yokukwatana na elipango lyokulinganisa.",
+          vision_title: "Okulihoshe kwetu",
+          vision_text:
+            "Okulihoshe kwa Linga Tchoss li okuti osite li platforma yolombwene y’Angola, yokupitavala ovakwate na ovakalunga, okuhindula esimbi lyokuhupitha ovasele vya kuvalela na okwelela okutumbuluka kupita eteknologia.",
+          mission_title: "Etona lyetu",
+          mission_text:
+            "Linga Tchoss li na etona lyokuhupitha ovakalunga na ovakwate posi Angola yose, okuhala ovasele vya saúde, educação na transporte vali k’epata limwe. Tuholela Angola yo kuvalela, yolombwene na yokukwatana kupita eteknologia.",
+          language: "Olongele",
           healph_services: "Ovilonga vyokulikwata esanje",
           education_services: "Ovilonga vyokukwata esekola no kufundila",
           pharmacy_services: "Ovilonga vyofármacia",
@@ -499,7 +759,7 @@ i18n
           greetings_service: "ndinge okulombolola ",
           service: "Ondaka",
           request_on_whastapp: "Twala k'okuti WhatsApp",
-          welcome: "Ukomwua",
+          welcome: "Okukwata k'ovisungo vi uli pepi nawe!",
           login: "Ulinga Linga Tchoss kwa Viomboloxelo",
           forInstitutions: "kwa Viomboloxelo",
           loginWithManagedAccount:
@@ -684,7 +944,7 @@ i18n
             "Okuyokiya kwenda kuvisanje vyowi ulomboloka, koko kuli osi Okuti kwenda vali!",
 
           secondary_text:
-            "Linga Tchoss wa KARGA MIDIA, (SU), LDA olombolwilo yokulitegua eyi okutwala ovilonga kwenda avalipwa pamoko. Tula ovifarmacya kwenda ovilonga vy’ohopitalu, ovikola kwenda ovitranporti – fena ovilonga kwenda okuvilomboloka kwenjele, kavava, kwenda vyaletiwa kuli wowo.",
+            "Linga Tchoss oco plataforma ya KARGA MIDIA eyi, kupita ko WhatsApp, okutila we k’ekola, ofármacia, osupermercado, okutransporta, ovilipo vyokulala pamwe na orestaurante vya pepi, okuhala vali vatalo vitano.",
           explore_services: "Tandulula Ovisanju",
 
           whatsapp: "Whatsapp",
@@ -729,6 +989,93 @@ i18n
       },
       fr: {
         translation: {
+          faqs: [
+            {
+              question: "Qu'est-ce que Linga Tchoss ?",
+              answer:
+                "Linga Tchoss est une plateforme numérique qui relie les entreprises et les clients en un seul endroit. Les pharmacies, hôpitaux, écoles, services de transport et autres peuvent offrir leurs services directement aux utilisateurs, avec géolocalisation et assistance via WhatsApp.",
+            },
+            {
+              question:
+                "Comment les entreprises peuvent-elles créer un compte sur Linga Tchoss ?",
+              answer:
+                "L'inscription des entreprises est effectuée manuellement par l'administrateur de la plateforme. Pour demander un compte, contactez-nous via WhatsApp dans la section « Contacts ». Après vérification, l'administrateur créera l'accès et enverra les informations de connexion.",
+            },
+            {
+              question: "Comment les clients utilisent-ils Linga Tchoss ?",
+              answer:
+                "Les clients peuvent rechercher des institutions, voir les services disponibles et les contacter directement via WhatsApp. Ils peuvent également demander des livraisons, planifier des rendez-vous ou obtenir des informations facilement.",
+            },
+            {
+              question:
+                "Puis-je prendre des rendez-vous ou demander des services via WhatsApp ?",
+              answer:
+                "Oui. Linga Tchoss intègre un assistant intelligent qui comprend votre message et vous aide à planifier des rendez-vous, demander des services ou poser des questions directement via WhatsApp.",
+            },
+            {
+              question: "Le service a-t-il un coût pour les clients ?",
+              answer:
+                "L'accès à Linga Tchoss est entièrement gratuit pour les clients. Seules les institutions souhaitant plus de visibilité ou des fonctionnalités avancées peuvent souscrire à des plans payants.",
+            },
+            {
+              question: "Quels types de services puis-je trouver ?",
+              answer:
+                "Sur Linga Tchoss, vous trouverez des services de santé, d’éducation, de transport, de livraison et bien plus encore. La plateforme est constamment mise à jour avec de nouvelles entreprises et secteurs.",
+            },
+            {
+              question: "Comment la plateforme protège-t-elle mes données ?",
+              answer:
+                "Linga Tchoss utilise une authentification sécurisée et le cryptage pour protéger les données des utilisateurs et des entreprises. Aucune information n'est partagée sans consentement et nous respectons des politiques de confidentialité strictes.",
+            },
+            {
+              question: "Puis-je modifier ou annuler une demande ?",
+              answer:
+                "Oui. Vous pouvez contacter directement l'entreprise via WhatsApp pour modifier ou annuler une demande, selon la politique de chaque institution.",
+            },
+            {
+              question: "Comment signaler un problème technique ?",
+              answer:
+                "Si vous rencontrez un problème technique, rendez-vous dans la section « Contacts » et envoyez un message via WhatsApp. Notre équipe d'assistance résoudra le problème dès que possible.",
+            },
+            {
+              question: "Linga Tchoss est-il disponible dans tout le pays ?",
+              answer:
+                "Oui. Toute institution peut être ajoutée, quelle que soit la province. Le système utilise la géolocalisation pour afficher les services les plus proches de chaque utilisateur.",
+            },
+          ],
+          _faqs: "Questions Fréquentes",
+          _home: "Accueil",
+          _services: "Services",
+          _about: "À propos",
+          _companies: "Entreprises",
+          _contacts: "Contacts",
+          innovation: "Innovation",
+          innovation_desc:
+            "Nous créons des solutions modernes qui transforment la manière dont les gens et les entreprises interagissent chaque jour.",
+
+          accessibility: "Accessibilité",
+          accessibility_desc:
+            "Nous facilitons l’accès aux services essentiels, en rendant la technologie simple, utile et disponible pour tous.",
+
+          trust: "Confiance",
+          trust_desc:
+            "Nous valorisons la transparence et la sécurité, en construisant des relations solides entre entreprises et clients.",
+
+          digital_inclusion: "Inclusion Numérique",
+          digital_inclusion_desc:
+            "Nous promouvons l’égalité d’accès aux outils numériques, aidant les communautés à se développer en ligne.",
+          values_in_action: "Nos Valeurs en Action",
+          about_title: "À propos de Linga Tchoss",
+          values_title: "Nos valeurs",
+          values_text:
+            "Chez Linga Tchoss, nous croyons en quatre piliers essentiels : Innovation, Accessibilité, Confiance et Inclusion Numérique. Nous travaillons chaque jour à créer des solutions technologiques qui rapprochent les entreprises et les personnes, pour un avenir plus connecté et équitable.",
+          vision_title: "Notre vision",
+          vision_text:
+            "Être la principale plateforme numérique d’Angola, reconnue pour rapprocher les personnes et les institutions, transformant la manière dont le pays accède aux services essentiels et favorise le développement grâce à la technologie.",
+          mission_title: "Notre mission",
+          mission_text:
+            "Linga Tchoss a pour mission de connecter les entreprises et les citoyens à travers l’Angola, en facilitant l’accès aux services essentiels tels que la santé, l’éducation et le transport en un seul clic. Nous croyons en une Angola plus numérique et unie grâce à la technologie.",
+          language: "Langue",
           healph_services: "Services de santé",
           education_services: "Services d’éducation et d’enseignement",
           pharmacy_services: "Services de pharmacies",
@@ -740,7 +1087,7 @@ i18n
           greetings_service: "je veux réserver ",
           service: "Service",
           request_on_whastapp: "Demander sur WhatsApp",
-          welcome: "Bienvenue",
+          welcome: "Connexion aux services près de chez vous !",
           login: "Connexion à Linga Tchoss pour les institutions",
           forInstitutions: "pour les institutions",
           loginWithManagedAccount: "Connexion avec un compte géré Linga Tchoss",
@@ -928,7 +1275,7 @@ i18n
           main_text:
             "Vous connecter aux services dont vous avez besoin, partout En temps réel!",
           secondary_text:
-            "Le Linga Tchoss de KARGA MIDIA, (SU), LDA est une solution technologique qui, à travers cette plateforme et le service automatique sur son canal WhatsApp, regroupe des institutions crédibles qui offrent des services utiles et urgents près de vous et en temps réel... À partir de l’endroit où vous vous trouvez, avec seulement cinq clics, vous aurez les écoles, pharmacies, supermarchés, transports, lieux d’hébergement et restaurants proches de vous. Économisez de l’argent, du temps, de l’énergie et des opportunités en utilisant la solution Linga Tchoss.",
+            "Linga Tchoss est une plateforme de KARGA MIDIA qui, via WhatsApp, vous connecte à des écoles, pharmacies, supermarchés, transports, hébergements et restaurants à proximité, en seulement cinq clics.",
           explore_services: "Explorer les Services",
           see_all: "Voir tout",
           discover_service_categories: "Découvrir les catégories de services",

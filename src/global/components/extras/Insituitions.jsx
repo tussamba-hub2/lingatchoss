@@ -190,19 +190,16 @@ export default function Institutions() {
   return (
     <div className="institutions-container padding-inside mt-100">
       <div className="d-flex column g-32px w-full">
-        <div className="d-flex items-center justify-between">
+        <div className="d-flex items-center justify-between g-20px">
           <h3 className="size-20 extra-bold">{t("instituitions_near_you")}</h3>
+          <NavLink to="https://wa.me/244923852407" target="_blank" className="btn btn-bg">
+            <span className="nowrap">Solicitar adesão</span>
+          </NavLink>
         </div>
         {institutions.length > 0 ? (
-          <div className="carousel-wrapper relative">
-            <button
-              className="carousel-button left"
-              onClick={() => handleScroll("left")}
-            >
-              <i className="fi fi-rr-angle-small-left"></i>
-            </button>
+          <div className="d-flex w-full">
             <div
-              className="carousel-container"
+              className="grid-inst w-full"
               ref={carrouselRef}
               onMouseDown={handleMouseDown}
               onMouseMove={handleMouseMove}
@@ -212,7 +209,7 @@ export default function Institutions() {
               {institutions.map((inst) => (
                 <div
                   key={inst.id}
-                  className="carousel-item"
+                  className="enter-item"
                   onClick={() => handleInstituitionClick(inst.id)}
                 >
                   <NavLink className="d-flex column g-12px">
@@ -227,12 +224,6 @@ export default function Institutions() {
                 </div>
               ))}
             </div>
-            <button
-              className="carousel-button right"
-              onClick={() => handleScroll("right")}
-            >
-              <i className="fi fi-rr-angle-small-right"></i>
-            </button>
           </div>
         ) : (
           <div className="no-institutions-message">

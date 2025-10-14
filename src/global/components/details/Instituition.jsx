@@ -166,18 +166,17 @@ const Instituition = ({ id }) => {
   }
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 36 }}>
+    <div className="hover-contenting">
       <section>
         <div
           style={{
             height: 160,
             background: "linear-gradient(135deg, #111827 0%, #1f2937 100%)",
-            borderRadius: "0 0 16px 16px",
           }}
         />
         <div
           style={{
-            marginTop: -48,
+            marginTop: -98,
             padding: 16,
             display: "flex",
             alignItems: "center",
@@ -286,165 +285,71 @@ const Instituition = ({ id }) => {
                   </div>
                 </div>
                 <div>
-                  <button
-                    onClick={() => {
-                      const num = (institution.whatsapp_number || "").replace(
-                        /\D/g,
-                        ""
-                      );
-                      const msg = `${t("greetings_service", "Olá")} ${
-                        institution.name
-                      }`;
-                      const phone =
-                        num && num.length > 0 ? num : "+244935150370";
-                      const url = `https://wa.me/${phone}?text=${encodeURIComponent(
-                        msg
-                      )}`;
-                      window.open(url, "_blank");
-                    }}
-                    className="huge-btn huge-green d-flex items-center justify-center g-12px"
-                  >
-                    <i className="fi fi-brands-whatsapp"></i>
-                    <span>
-                      {t("contact_institution", "Contactar no WhatsApp")}
-                    </span>
-                  </button>
                 </div>
-              </div>
-              <div style={{ color: "#6b7280", fontSize: 12 }}>
-                <span>
-                  {t("services", "Serviços")}: {services.length}
-                </span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section style={{ padding: 16 }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            marginBottom: 12,
-          }}
-        >
-          <h3 style={{ fontSize: 18, fontWeight: 800, margin: 0 }}>
+      <section className="d-flex column g-36px padding-inside">
+        <div className="d-flex items-center justify-between p-16">
+          <h3 className="size-18 extra-bold">
             {t("services_of_institution", "Serviços da instituição")}
           </h3>
-          <span style={{ color: "#6b7280", fontSize: 12 }}>
-            {services.length} {t("items", "itens")}
-          </span>
         </div>
 
         {services.length === 0 ? (
-          <div
-            style={{
-              minHeight: 200,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#9ca3af",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: 8,
-              }}
-            >
-              <i className="fi fi-sr-box" style={{ fontSize: 36 }}></i>
-              <span style={{ fontSize: 14, textAlign: "center" }}>
+          <div className="d-flex column items-center justify-center">
+            <div className="d-flex column items-center">
+              <i className="fi fi-sr-box size-32"></i>
+              <span className="text-center size-14">
                 {t("no_services_found", "Nenhum serviço encontrado.")}
               </span>
             </div>
           </div>
         ) : (
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
-              gap: 16,
-            }}
-          >
+          <div className="services-gridden">
             {services.map((svc) => (
               <button
                 key={svc.id}
                 onClick={() => navigate(`/service/${svc.id}`)}
-                style={{
-                  textAlign: "left",
-                  background: "#fff",
-                  border: "1px solid #f3f4f6",
-                  borderRadius: 12,
-                  overflow: "hidden",
-                  cursor: "pointer",
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.04)",
-                }}
-              >
+                className="service-item d-flex column g-4px relative">
                 {svc.imageUrl ? (
                   <div
-                    style={{
-                      width: "100%",
-                      aspectRatio: "4 / 3",
-                      overflow: "hidden",
-                    }}
+                    className="image-prod"
                   >
                     <img
                       src={svc.imageUrl}
                       alt={svc.name}
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
                     />
                   </div>
                 ) : (
-                  <div
-                    style={{
-                      height: 140,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      background: "#f9fafb",
-                    }}
-                  >
+                    <div className="product-avatar">
                     <i className="fi fi-sr-box"></i>
                   </div>
                 )}
-                <div
-                  style={{
-                    padding: 12,
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: 6,
-                  }}
-                >
-                  <b style={{ fontWeight: 600, fontSize: 15 }}>
-                    {svc.name.length > 22
-                      ? svc.name.substring(0, 22) + "..."
-                      : svc.name}
-                  </b>
-                  <span
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 6,
-                      color: "#6b7280",
-                      fontSize: 12,
-                    }}
-                  >
-                    <i className="fi fi-rr-tag"></i>
-                    <span>{svc.categoryName || ""}</span>
+                <div className="p-12">
+                  <div className="d-flex items-center justify-between">
+                    <b className="bold size-14">
+                        {svc.name.length > 22
+                        ? svc.name.substring(0, 22) + "..."
+                        : svc.name}
+                    </b>
+                    <span className="size-14 bold">
+                        {svc.price.toLocaleString('pt-BR', {
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2
+                        })}
+                    </span>
+                  </div>
+                  <span>
+                    <span className="color-opac size-12">
+                        {svc.categoryName || ""}
+                    </span>
+                    
                   </span>
-                  <span
-                    style={{ marginTop: 2, color: "#111827", fontWeight: 700 }}
-                  >
-                    {svc.price} kz
-                  </span>
+                  
                 </div>
               </button>
             ))}

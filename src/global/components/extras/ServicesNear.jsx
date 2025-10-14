@@ -11,13 +11,7 @@ export default function ServicesNear() {
         >
           {t("services_side")}
         </h1>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-            gap: 16,
-          }}
-        >
+        <div className="services-grids">
           {[
             {
               icon: "🏥",
@@ -74,6 +68,7 @@ export default function ServicesNear() {
                 border: "1px solid #e2e8f0",
                 boxShadow: "0 6px 20px rgba(0,0,0,0.06)",
               }}
+              className="svc"
             >
               <div
                 style={{

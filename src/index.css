@@ -1332,7 +1332,7 @@ table {
 .cover-ladning-page {
     width: 100vw;
     background: #0a1317;
-    background-image: linear-gradient(#0a1317dc, #0a1317dc), url("./assets/images/family.jpg");
+    background-image: linear-gradient(#0a1317dc, #0a1317dc), url("./images/family.jpg");
     height: 100vh;
     position: relative;
     background-size: cover;

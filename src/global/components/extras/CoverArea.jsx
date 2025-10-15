@@ -16,7 +16,7 @@ export default function CoverArea() {
                     </div>
                     <NavLink to="/search" className="btn huge-btn btn-bg">
                         <i className="fi fi-ss-bolt"></i>
-                        <span>Explorar serviços</span>
+                        <span>{t('explore_services')}</span>
                     </NavLink>
                 </div>
             </div>

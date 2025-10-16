@@ -1481,6 +1481,17 @@ table {
     place-content: center;
 }
 
+.animation-fade {
+    animation: fade 1.5s ease-in-out;
+}
+.animation-fade2 {
+    animation: fade 2s ease-in-out;
+}
+.animation-fade3 {
+    animation: fade 2.5s ease-in-out;
+}
+
+
 
 /*ENDOF COPIED ANIMATIONS*/
 
@@ -1559,6 +1570,18 @@ table {
     transform: translateY(0px) scale(1);
   }
 }
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+}
+
 /*endof animations*/
 
 @media screen and (min-width: 1450px) {

@@ -108,6 +108,19 @@ i18n
           supermarket_services: "Serviços de supermercado",
           transport_services: "Serviços de transporte e Logística",
           hotel_services: "Serviços de Hotelaria, restauração e Hospedagem",
+
+          healph_services_desc:
+            "Serviços médicos, clínicas, hospitais e apoio à saúde.",
+          education_services_desc:
+            "Escolas, cursos, formação e reforço académico.",
+          pharmacy_services_desc:
+            "Farmácias, medicamentos e produtos de bem‑estar.",
+          supermarket_services_desc:
+            "Supermercados, mercearias e entrega de compras.",
+          transport_services_desc:
+            "Entregas, mototáxis, logística e transportes locais.",
+          hotel_services_desc: "Hotéis, hospedagem e serviços de restauração.",
+
           more_by: "Mais de",
           greetings_service: "quero marcar ",
           service: "Serviço",
@@ -434,6 +447,19 @@ i18n
           supermarket_services: "Supermarket services",
           transport_services: "Transport and logistics services",
           hotel_services: "Hospitality, restaurant and lodging services",
+
+          healph_services_desc:
+            "Medical services, clinics, hospitals, and health support.",
+          education_services_desc:
+            "Schools, courses, training, and academic support.",
+          pharmacy_services_desc:
+            "Pharmacies, medicines, and wellness products.",
+          supermarket_services_desc:
+            "Supermarkets, grocery stores, and delivery of purchases.",
+          transport_services_desc:
+            "Deliveries, motorbike taxis, logistics, and local transport.",
+          hotel_services_desc: "Hotels, accommodation, and catering services.",
+
           more_by: "More by",
           greetings_service: "i want to book ",
           service: "Service",
@@ -617,7 +643,7 @@ i18n
             "Connecting you to the services you need, anywhere in real time!",
 
           secondary_text:
-            "Linga Tchoss is a platform by KARGA MIDIA that, via WhatsApp, connects you to nearby schools, pharmacies, supermarkets, transport, accommodations, and restaurants in just five clicks.",
+            "Linga Tchoss is a platform by KARGA MIDIA that, using WhatsApp, connects you to nearby schools, pharmacies, supermarkets, transport, accommodations, and restaurants in just five clicks.",
           explore_services: "Explore Services",
 
           whatsapp: "Whatsapp",
@@ -755,6 +781,20 @@ i18n
           supermarket_services: "Ovilonga vyosupermercado",
           transport_services: "Ovilonga vyotransporte no Logística",
           hotel_services: "Ovilonga vyohotelaria, okulyakula no ohospedagem",
+
+          healph_services_desc:
+            "Ovisunga vy’alusangu, vikilinika, malukise kwenda okulembika kw’olusangu.",
+          education_services_desc:
+            "Ovisiwa, okulinga, okufetiwa kwenda okusangisiwa kwa lisano.",
+          pharmacy_services_desc:
+            "Ovakombokela, imiti kwenda ovikele vy’okulimbuka.",
+          supermarket_services_desc:
+            "Ovisumaka, ovokombanda kwenda okutepisa ovikupwila.",
+          transport_services_desc:
+            "Okutepisa, omototaxi, logistica kwenda ovitwalelo vyokalunga.",
+          hotel_services_desc:
+            "Otelisi, okutyandikiwa kwenda ovisunga vy’okulya.",
+
           more_by: "Okuti",
           greetings_service: "ndinge okulombolola ",
           service: "Ondaka",
@@ -1083,6 +1123,20 @@ i18n
           transport_services: "Transport and logistics services",
           hotel_services:
             "Services d’hôtellerie, de restauration et d’hébergement",
+
+          healph_services_desc:
+            "Services médicaux, cliniques, hôpitaux et soutien sanitaire.",
+          education_services_desc:
+            "Écoles, cours, formations et soutien scolaire.",
+          pharmacy_services_desc:
+            "Pharmacies, médicaments et produits de bien-être.",
+          supermarket_services_desc:
+            "Supermarchés, épiceries et livraison des achats.",
+          transport_services_desc:
+            "Livraisons, motos-taxis, logistique et transports locaux.",
+          hotel_services_desc:
+            "Hôtels, hébergement et services de restauration.",
+
           more_by: "Plus par",
           greetings_service: "je veux réserver ",
           service: "Service",
@@ -1275,7 +1329,7 @@ i18n
           main_text:
             "Vous connecter aux services dont vous avez besoin, partout En temps réel!",
           secondary_text:
-            "Linga Tchoss est une plateforme de KARGA MIDIA qui, via WhatsApp, vous connecte à des écoles, pharmacies, supermarchés, transports, hébergements et restaurants à proximité, en seulement cinq clics.",
+            "Linga Tchoss est une plateforme de KARGA MIDIA qui, utilisant WhatsApp, vous connecte à des écoles, pharmacies, supermarchés, transports, hébergements et restaurants à proximité, en seulement cinq clics.",
           explore_services: "Explorer les Services",
           see_all: "Voir tout",
           discover_service_categories: "Découvrir les catégories de services",

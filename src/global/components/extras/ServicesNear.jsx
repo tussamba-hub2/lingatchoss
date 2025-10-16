@@ -17,43 +17,43 @@ export default function ServicesNear() {
               icon: "🏥",
               title: t("healph_services"),
               desc: `${t(
-                "healph_services"
-              )}: Serviços médicos, clínicas, hospitais e apoio à saúde.`,
+                "healph_services_desc"
+              )}`,
             },
             {
               icon: "📖",
               title: t("education_services"),
               desc: `${t(
-                "education_services"
-              )}: Escolas, cursos, formação e reforço académico.`,
+                "education_services_desc"
+              )}`,
             },
             {
               icon: "💊",
               title: t("pharmacy_services"),
               desc: `${t(
-                "pharmacy_services"
-              )}: Farmácias, medicamentos e produtos de bem‑estar.`,
+                "pharmacy_services_desc"
+              )}`,
             },
             {
               icon: "🛒",
               title: t("supermarket_services"),
               desc: `${t(
-                "supermarket_services"
-              )}: Supermercados, mercearias e entrega de compras.`,
+                "supermarket_services_desc"
+              )}`,
             },
             {
               icon: "🏍️",
               title: t("transport_services"),
               desc: `${t(
-                "transport_services"
-              )}: Entregas, mototáxis, logística e transportes locais.`,
+                "transport_services_desc"
+              )}`,
             },
             {
               icon: "🏨",
               title: t("hotel_services"),
               desc: `${t(
-                "hotel_services"
-              )}: Hotéis, hospedagem e serviços de restauração.`,
+                "hotel_services_desc"
+              )}`,
             },
           ].map((item, idx) => (
             <div

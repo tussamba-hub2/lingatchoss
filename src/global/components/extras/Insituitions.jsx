@@ -192,7 +192,7 @@ export default function Institutions() {
       <div className="d-flex column g-32px w-full">
         <div className="d-flex items-center justify-between g-20px">
           <h3 className="size-20 extra-bold">{t("instituitions_near_you")}</h3>
-          <NavLink to="https://wa.me/244923852407" target="_blank" className="btn btn-bg">
+          <NavLink to="https://wa.me/244933522999" target="_blank" className="btn btn-bg">
             <span className="nowrap">Solicitar adesão</span>
           </NavLink>
         </div>

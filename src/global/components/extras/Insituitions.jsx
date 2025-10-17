@@ -193,7 +193,7 @@ export default function Institutions() {
         <div className="d-flex items-center justify-between g-20px">
           <h3 className="size-20 extra-bold">{t("instituitions_near_you")}</h3>
           <NavLink to="https://wa.me/244933522999" target="_blank" className="btn btn-bg">
-            <span className="nowrap">Solicitar adesão</span>
+            <span className="nowrap">{t('request_ad')}</span>
           </NavLink>
         </div>
         {institutions.length > 0 ? (
